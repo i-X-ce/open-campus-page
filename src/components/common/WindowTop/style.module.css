@@ -1,10 +1,12 @@
 .container {
+  position: relative;
   display: flex;
   background-color: var(--bc-card);
   align-items: center;
   justify-content: end;
   padding: 5px;
   box-shadow: var(--shadow-bottom);
+  z-index: 2;
 }
 
 .icons {

@@ -124,10 +124,10 @@ function ProgramCardWrapper({
   );
 }
 
-const EventsSection = () => {
+const ProgramSection = () => {
   return (
-    <CommonSection>
-      <SectionTitle title="EVENTS" subTitle="イベント" />
+    <CommonSection backgroundColor="section">
+      <SectionTitle title="PROGRAM" subTitle="プログラム" />
       <div className={styles.cardsContainer}>
         {programs.map((program, i) => (
           <>
@@ -150,4 +150,4 @@ const EventsSection = () => {
   );
 };
 
-export default EventsSection;
+export default ProgramSection;

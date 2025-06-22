@@ -1,0 +1,57 @@
+.container {
+  display: flex;
+  justify-content: space-around;
+}
+
+.num {
+  font-size: 25rem;
+  color: transparent;
+  -webkit-text-stroke: 1px var(--bc-primary);
+}
+
+.windowContainer {
+  min-width: 650px;
+  min-height: 500px;
+  background: var(--bc-section);
+  position: relative;
+}
+
+.eventsContainer {
+  display: grid;
+  --time-width: 200px;
+  grid-template-columns: var(--time-width) 1fr;
+  row-gap: 30px;
+  column-gap: 20px;
+  padding: 20px 0;
+}
+
+.timeBg {
+  position: absolute;
+  background-color: var(--bc-card2);
+  width: var(--time-width);
+  height: 100%;
+  bottom: 0;
+}
+
+.eventTime {
+  font-size: 1.2rem;
+  z-index: 2;
+  text-align: center;
+}
+
+.eventTitle {
+  font-size: 1.5rem;
+  border-bottom: 1px solid var(--bc-border);
+}
+
+.eventDescription {
+  color: var(--bc-detail);
+}
+
+.windowFooter {
+  position: absolute;
+  height: 2rem;
+  width: 100%;
+  bottom: 0;
+  background-color: var(--bc-primary);
+}

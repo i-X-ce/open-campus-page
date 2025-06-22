@@ -1,13 +1,15 @@
 // import styles from "./style.module.css";
 
-import EventsSection from "../EventsSection";
+import DetailSection from "../DetailSection";
+import ProgramSection from "../ProgramSection";
 import TopSection from "../TopSection";
 
 const OpencampusPageContent = () => {
   return (
     <div>
       <TopSection />
-      <EventsSection />
+      <ProgramSection />
+      <DetailSection />
     </div>
   );
 };

@@ -51,6 +51,7 @@
   align-items: end;
   min-height: 200px;
   box-shadow: var(--shadow-center);
+  background-color: var(--bc-background);
   overflow: hidden;
 }
 

@@ -1,7 +1,6 @@
 import styles from "./style.module.css";
 
 import TitleSet from "../../common/TitleSet";
-import PentagonBox from "../../common/PentagonBox";
 import SubEventButton from "../SubEventButton";
 
 const ProgramCard = ({

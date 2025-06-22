@@ -9,6 +9,7 @@
   --bc-primary: #3ae5ff;
   --bc-detail: #c3c3c3;
   --bc-card: #939393;
+  --bc-card2: #727272;
   --bc-section: #5c5c5c;
   --bc-border: #ffffff40;
   --bc-shadow: rgba(0, 0, 0, 0.2);
@@ -18,7 +19,7 @@
   --shadow-center: 0px 0px 10px var(--bc-shadow);
 
   --max-width: 1200px;
-  --padding-out: 50px; /* 外側のパディング */
+  --space-out: 50px; /* 外側のスペース */
 }
 
 body {
