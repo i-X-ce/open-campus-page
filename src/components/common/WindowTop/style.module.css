@@ -1,0 +1,14 @@
+.container {
+  display: flex;
+  background-color: var(--bc-card);
+  align-items: center;
+  justify-content: end;
+  padding: 5px;
+  box-shadow: var(--shadow-bottom);
+}
+
+.icons {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}

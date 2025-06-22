@@ -1,0 +1,53 @@
+.section {
+  position: relative;
+  min-height: 90vh;
+  display: flex;
+}
+
+.container {
+  display: flex;
+  position: relative;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  max-width: var(--max-width);
+  margin: 0 auto;
+}
+
+.textContainer {
+  display: flex;
+  font-size: 10rem;
+  line-height: 1;
+  gap: 20px;
+}
+
+.date {
+  display: flex;
+  gap: 10px;
+  font-size: 5rem;
+  color: var(--bc-primary);
+  margin-top: 10px;
+}
+
+.day {
+  font-size: 7rem;
+  color: var(--bc-background);
+  background-color: var(--bc-primary);
+}
+
+.leftLine,
+.leftLine2 {
+  width: 50px;
+  background-color: var(--bc-primary);
+  align-self: stretch;
+}
+
+.leftLine2 {
+  width: 10px;
+}
+
+.windowContainer {
+  min-width: 500px;
+  min-height: 500px;
+  background: var(--bc-section);
+}

@@ -1,0 +1,31 @@
+.container {
+  position: relative;
+  line-height: 1;
+}
+
+.titleContainer {
+  color: var(--bc-text);
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+}
+
+.titleContainer1 {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  overflow: hidden;
+  background-color: var(--bc-primary);
+  height: 1rem;
+  z-index: 2;
+  color: var(--bc-background);
+  padding-right: 100px;
+}
+
+.subTitle {
+  font-size: 1.5rem;
+}
+
+.title {
+  font-size: 5rem;
+}

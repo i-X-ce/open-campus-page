@@ -1,0 +1,27 @@
+import styles from "./style.module.css";
+import WindowTop from "../../common/WindowTop";
+
+const TopSection = () => {
+  return (
+    <section className={styles.section}>
+      <div className={styles.container}>
+        <div className={`${styles.textContainer} big-s`}>
+          <div className={styles.leftLine} />
+          <div className={styles.leftLine2} />
+          <div>
+            <p>OPEN</p>
+            <p>CAMPUS</p>
+            <div className={styles.date}>
+              2025 <div className={styles.day}>8/12-15</div>
+            </div>
+          </div>
+        </div>
+        <div className={styles.windowContainer}>
+          <WindowTop />
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default TopSection;
