@@ -7,7 +7,7 @@
   --bc-background: #464646;
   --bc-text: #ffffff;
   --bc-primary: #3ae5ff;
-  --bc-detail: #e0e0e0;
+  --bc-detail: #c3c3c3;
   --bc-card: #939393;
   --bc-section: #5c5c5c;
   --bc-border: #ffffff40;
@@ -15,6 +15,7 @@
 
   --shadow-regular: 3px 3px 3px var(--bc-shadow);
   --shadow-bottom: 0px 3px 3px var(--bc-shadow);
+  --shadow-center: 0px 0px 10px var(--bc-shadow);
 
   --max-width: 1200px;
   --padding-out: 50px; /* 外側のパディング */
@@ -26,6 +27,14 @@ body {
   font-family: "Zen Kaku Gothic New", sans-serif;
   font-weight: 400;
   font-style: normal;
+}
+
+button {
+  cursor: pointer;
+  background-color: transparent;
+  border: none;
+  color: inherit;
+  font: inherit;
 }
 
 .zen {

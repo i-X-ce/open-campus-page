@@ -1,4 +1,9 @@
 .cardsContainer {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr 1px 1fr;
+}
+
+.programBorder {
+  width: 1px;
+  background-color: var(--bc-border);
 }

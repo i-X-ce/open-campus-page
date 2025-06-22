@@ -1,0 +1,87 @@
+.container {
+  --container-margin: 50px;
+  display: grid;
+}
+
+.container-R {
+  /* margin-left: var(--container-margin); */
+  grid-template-areas:
+    "border card"
+    ". subEvents";
+}
+
+.container-L {
+  /* margin-right: var(--container-margin); */
+  grid-template-areas:
+    "card border"
+    "subEvents .";
+}
+
+.programBorderWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.programBorder {
+  grid-area: border;
+  width: 100%;
+  height: 1px;
+  background-color: var(--bc-border);
+}
+
+.cardWrapper {
+  grid-area: card;
+  position: relative;
+}
+
+.time {
+  --font-size: 2rem;
+  position: absolute;
+  font-size: var(--font-size);
+  top: calc(var(--font-size) * (-1.2));
+  color: var(--bc-detail);
+}
+
+.card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: end;
+  min-height: 200px;
+  box-shadow: var(--shadow-center);
+  overflow: hidden;
+}
+
+.num {
+  position: absolute;
+  left: 0px;
+  bottom: -40px;
+  font-size: 12rem;
+  opacity: 0.1;
+  line-height: 1;
+}
+
+.textContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.border {
+  height: 1px;
+  background-color: var(--bc-border);
+}
+
+.description {
+  color: var(--bc-detail);
+  padding-right: 20px;
+}
+
+.subEventsContainer {
+  grid-area: subEvents;
+  margin-top: 5px;
+  display: flex;
+  gap: 5px;
+}
