@@ -14,28 +14,42 @@ const DetailUnit = ({
   num,
   title,
   subTitle,
+  description,
   events,
+  reverse = false,
 }: {
   num: number;
   title: string;
   subTitle: string;
+  description: string;
   events: DetailUnitEventType[];
+  reverse?: boolean;
 }) => {
   return (
-    <div className={styles.container}>
+    <div
+      className={styles.container}
+      style={{
+        flexDirection: reverse ? "row-reverse" : "row",
+      }}
+    >
       <p className={`${styles.num} big-s`}>{num.toString().padStart(2, "0")}</p>
       <div className={styles.windowContainer}>
         <div className={styles.window}>
           <WindowTop />
           <div className={styles.eventsContainer}>
-            <div></div>
-            <TitleSet
-              title={title}
-              subTitle={subTitle}
-              titleSize="1.5rem"
-              subTitleSize="1.2rem"
-              className={styles.titleSet}
-            />
+            <div />
+            <div className={styles.eventTitleContainer}>
+              <TitleSet
+                title={title}
+                subTitle={subTitle}
+                titleSize="1.5rem"
+                subTitleSize="1.2rem"
+                titleColor="background"
+                subTitleColor="background"
+                className={styles.eventTitleSet}
+              />
+              <div>{description}</div>
+            </div>
             {events.map((event, i) => (
               <>
                 <div className={`${styles.eventTime} roboto`}>{event.time}</div>

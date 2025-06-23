@@ -1,4 +1,4 @@
-import type { ColorType } from "../../../utils/colorType";
+import { ct2css, type ColorType } from "../../../utils/colorType";
 import styles from "./style.module.css";
 
 const TitleSet = ({
@@ -24,7 +24,7 @@ const TitleSet = ({
         className={`${styles.subTitle} big-s`}
         style={{
           fontSize: subTitleSize,
-          color: subTitleColor,
+          color: ct2css(subTitleColor),
         }}
       >
         {subTitle}
@@ -33,7 +33,7 @@ const TitleSet = ({
         className={styles.title}
         style={{
           fontSize: titleSize,
-          color: titleColor,
+          color: ct2css(titleColor),
         }}
       >
         {title}

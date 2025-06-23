@@ -38,6 +38,11 @@ button {
   font: inherit;
 }
 
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
 .zen {
   font-family: "Zen Kaku Gothic New", sans-serif;
   font-weight: 400;

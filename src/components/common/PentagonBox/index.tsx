@@ -14,6 +14,7 @@ const PentagonBox = ({
 }: {
   children?: ReactNode;
   className?: string;
+  borderClassName?: string;
   variant?: "filled" | "outlined";
   cutSize?: string;
   backgroundColor?: ColorType;

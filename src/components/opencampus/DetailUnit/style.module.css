@@ -25,6 +25,21 @@
   padding: 20px 0;
 }
 
+.eventTitleContainer {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  border-bottom: 1px solid var(--bc-primary);
+  margin-right: 20px;
+}
+
+.eventTitleSet {
+  background-color: var(--bc-primary);
+  padding: 5px;
+  padding-right: 20px;
+  clip-path: polygon(0 0, calc(100% - 10px) 0, 100% 100%, 0% 100%);
+}
+
 .timeBg {
   position: absolute;
   background-color: var(--bc-card2);
