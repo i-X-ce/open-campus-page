@@ -1,5 +1,6 @@
 // import styles from "./style.module.css";
 
+import AboutSection from "../AboutSection";
 import ApplicationSection from "../ApplicationSection";
 import DetailSection from "../DetailSection";
 import ProgramSection from "../ProgramSection";
@@ -12,6 +13,7 @@ const OpencampusPageContent = () => {
       <ProgramSection />
       <DetailSection />
       <ApplicationSection />
+      <AboutSection />
     </div>
   );
 };

@@ -30,11 +30,7 @@ const ApplicationSection = () => {
             </ul>
           </div>
           <a href="#" className={styles.topApplyButton}>
-            <PentagonBox
-              cutSize="50px"
-              className={styles.topApplyButtonBox}
-              variant="outlined"
-            >
+            <PentagonBox cutSize="50px" variant="outlined">
               <div className={styles.topApplyButtonText}>
                 <span>
                   <p>お申込み</p>

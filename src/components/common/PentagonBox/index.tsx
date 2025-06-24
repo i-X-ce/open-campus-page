@@ -6,6 +6,7 @@ import type { ReactNode } from "react";
 const PentagonBox = ({
   children,
   className = "",
+  classNameOuter = "",
   variant = "filled",
   cutSize = "10px",
   backgroundColor = "background",
@@ -14,6 +15,7 @@ const PentagonBox = ({
 }: {
   children?: ReactNode;
   className?: string;
+  classNameOuter?: string;
   borderClassName?: string;
   variant?: "filled" | "outlined";
   cutSize?: string;
@@ -39,7 +41,7 @@ const PentagonBox = ({
           backgroundColor: `var(--bc-${borderColor})`,
           padding: borderSize,
         }}
-        className={styles.outlinedContainer}
+        className={classNameOuter}
       >
         <div className={className} style={cutStyle}>
           {children}

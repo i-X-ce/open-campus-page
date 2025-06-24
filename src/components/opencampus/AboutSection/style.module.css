@@ -1,0 +1,66 @@
+.container {
+  position: relative;
+  display: flex;
+  align-items: end;
+  margin-top: 100px;
+}
+
+.textContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 60%;
+}
+
+.catchText {
+  font-size: 2.5rem;
+}
+
+.catchTextBig {
+  font-size: 2.8rem;
+}
+
+.saikyou {
+  color: var(--bc-primary);
+}
+
+.textBorder {
+  height: 1px;
+  width: 100vw;
+  align-self: end;
+  background-color: var(--bc-border);
+}
+
+.description {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  font-size: 1.3rem;
+  padding-right: 20px;
+  color: var(--bc-detail);
+  margin: 20px 0;
+}
+
+.buttonsContainer {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  padding-right: 20px;
+}
+
+.imgContainer {
+  position: relative;
+  flex: 1;
+  align-self: stretch;
+  justify-self: start;
+  width: 100vw;
+}
+
+.imgContent {
+  position: absolute;
+  border: solid 1px var(--bc-border);
+  top: 0;
+  left: 0;
+  width: 50vw;
+  height: 100%;
+}
