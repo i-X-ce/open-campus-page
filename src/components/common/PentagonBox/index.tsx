@@ -1,5 +1,5 @@
 import type { ColorType } from "../../../utils/colorType";
-import styles from "./style.module.css";
+// import styles from "./style.module.css";
 
 import type { ReactNode } from "react";
 
