@@ -4,6 +4,7 @@ import AboutSection from "../AboutSection";
 import AccessSection from "../AccessSection";
 import ApplicationSection from "../ApplicationSection";
 import DetailSection from "../DetailSection";
+import InfomationSection from "../InfomationSection";
 import ProgramSection from "../ProgramSection";
 import TopSection from "../TopSection";
 
@@ -16,6 +17,7 @@ const OpencampusPageContent = () => {
       <ApplicationSection />
       <AboutSection />
       <AccessSection />
+      <InfomationSection />
     </div>
   );
 };
