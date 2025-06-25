@@ -1,0 +1,55 @@
+.container {
+  margin-bottom: 30px;
+}
+.title {
+  font-size: 1.2rem;
+}
+.linksContainer {
+  display: grid;
+  grid-template-columns: 1rem 1fr;
+}
+.linksBorderWrapper {
+  display: flex;
+  justify-content: end;
+}
+.linksBorder {
+  width: 1px;
+  background-color: var(--bc-border);
+}
+.links {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  padding-top: 0.5rem;
+}
+.link {
+  display: flex;
+  align-items: center;
+  color: var(--bc-detail);
+}
+.linkBorder {
+  height: 1px;
+  width: 1rem;
+  background-color: var(--bc-border);
+}
+.linkA {
+  padding-left: 0.5rem;
+}
+.linkEnd {
+  display: flex;
+}
+.linkEndPoint {
+  height: 10px;
+  aspect-ratio: 1 / 1;
+  border: solid 1px var(--bc-border);
+  border-radius: 50%;
+  bottom: 0;
+  right: 0;
+  transform: translate(0, 50%);
+}
+.linkEndBorder {
+  flex: 1;
+  height: 1px;
+  background-color: var(--bc-border);
+  align-self: flex-end;
+}

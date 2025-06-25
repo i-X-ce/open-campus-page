@@ -15,32 +15,6 @@
   padding: 10px var(--space-out);
 }
 
-.logoCotainer {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-}
-
-.logo {
-  font-size: 2.5rem;
-}
-
-.titleContainer {
-  line-height: 1;
-}
-
-.subTitle {
-  font-size: 0.9rem;
-}
-
-.accent {
-  color: var(--bc-primary);
-}
-
-.title {
-  font-size: 1.2rem;
-}
-
 .navList {
   list-style: none;
   display: flex;
