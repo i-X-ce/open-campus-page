@@ -3,6 +3,7 @@ import styles from "./style.module.css";
 import CommonSection from "../../common/CommonSection";
 import SectionTitle from "../../common/SectionTitle";
 import WindowTop from "../../common/WindowTop";
+import { CUTInfo } from "../../../utils/CUTInfo";
 
 const AccessSection = () => {
   return (
@@ -19,8 +20,8 @@ const AccessSection = () => {
               referrerPolicy="no-referrer-when-downgrade"
             ></iframe>
             <div className={styles.windowTextBox}>
-              <p>〒192-0393 東京都八王子市電脳ヶ丘1丁目1番地1</p>
-              <p className={styles.callNumber}>000-000-0000</p>
+              <p>{CUTInfo.address}</p>
+              <p className={styles.callNumber}>{CUTInfo.phone}</p>
             </div>
           </div>
         </div>
