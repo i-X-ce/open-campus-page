@@ -64,6 +64,7 @@
   left: 0;
   width: 50vw;
   height: 100%;
+  gap: var(--space-ss);
   grid-template-areas:
     "i1 i1 i1"
     "i1 i1 i1"

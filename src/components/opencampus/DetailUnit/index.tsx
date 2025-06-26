@@ -47,7 +47,7 @@ const DetailUnit = ({
             {bigEventData.subEvents?.map((event, i) => (
               <>
                 <div className={`${styles.eventTime} roboto`}>{event.time}</div>
-                <div key={i}>
+                <div key={i} className={styles.eventDetailContainer}>
                   <div className={styles.eventTitleWrapper}>
                     <TitleSet
                       title={event.title}

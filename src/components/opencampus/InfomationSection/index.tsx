@@ -6,15 +6,29 @@ import InfomationButton from "../InfomationButton";
 
 const InfomationSection = () => {
   return (
-    <CommonSection className={styles.section}>
-      <SectionTitle title="INFORMATION" subTitle="大学情報" />
+    <>
+      <CommonSection>
+        <SectionTitle title="INFORMATION" subTitle="大学情報" />
+      </CommonSection>
       <div className={styles.buttonsContainer}>
-        <InfomationButton title="学生生活" subTitle="STUDENT LIFE" />
-        <InfomationButton title="学生生活" subTitle="STUDENT LIFE" />
-        <InfomationButton title="学生生活" subTitle="STUDENT LIFE" />
-        <InfomationButton title="学生生活" subTitle="STUDENT LIFE" />
+        <InfomationButton
+          title="学生生活"
+          subTitle="STUDENT LIFE"
+          imgNum={10}
+        />
+        <InfomationButton title="学生生活" subTitle="STUDENT LIFE" imgNum={5} />
+        <InfomationButton
+          title="学生生活"
+          subTitle="STUDENT LIFE"
+          imgNum={11}
+        />
+        <InfomationButton
+          title="学生生活"
+          subTitle="STUDENT LIFE"
+          imgNum={16}
+        />
       </div>
-    </CommonSection>
+    </>
   );
 };
 

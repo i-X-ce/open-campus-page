@@ -6,20 +6,27 @@ import TitleSet from "../../common/TitleSet";
 const InfomationButton = ({
   title,
   subTitle,
+  imgNum = 1,
 }: {
   title: string;
   subTitle: string;
+  imgNum?: number;
 }) => {
   return (
-    <a href="#">
-      <PentagonBox variant="outlined" borderColor="text" cutSize="30px">
-        <TitleSet
-          title={title}
-          subTitle={subTitle}
-          className={styles.titleSet}
-          titleSize="1.5rem"
-          subTitleSize="1rem"
-        />
+    <a href="#" className={styles.container}>
+      <PentagonBox cutSize="50px">
+        <div
+          className={styles.content}
+          style={{ backgroundImage: `url("/images/image (${imgNum}).jpeg")` }}
+        >
+          <TitleSet
+            title={title}
+            subTitle={subTitle}
+            className={styles.titleSet}
+            titleSize="1.5rem"
+            subTitleSize="1rem"
+          />
+        </div>
       </PentagonBox>
     </a>
   );

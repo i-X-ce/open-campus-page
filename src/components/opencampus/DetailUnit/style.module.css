@@ -72,6 +72,11 @@
   text-align: center;
 }
 
+.eventDetailContainer {
+  border-left: solid 1px var(--bc-primary);
+  padding-left: var(--space-m);
+}
+
 .eventTitleWrapper {
   display: flex;
   justify-content: space-between;

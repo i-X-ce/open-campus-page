@@ -1,9 +1,5 @@
 .buttonsContainer {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
+  display: flex;
   gap: var(--space-m);
-  margin-top: var(--space-lll);
-}
-.section {
-  min-height: 100vh;
+  padding: var(--space-m);
 }
