@@ -28,6 +28,8 @@ const ProgramCard = ({
             <TitleSet
               title={bigEventData.eventData.title}
               subTitle={bigEventData.eventData.subTitle}
+              titleSize="1.5rem"
+              subTitleSize="1rem"
             />
             <div className={styles.border} />
             <p className={styles.description}>
@@ -38,7 +40,7 @@ const ProgramCard = ({
       </div>
       <div className={styles.subEventsContainer}>
         {bigEventData.subEvents?.map((event, i) => (
-          <SubEventButton key={i} title={event.subTitle} />
+          <SubEventButton key={i} event={event} />
         ))}
       </div>
     </div>

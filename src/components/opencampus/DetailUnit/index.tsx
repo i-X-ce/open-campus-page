@@ -1,7 +1,9 @@
+import { div } from "motion/react-client";
 import type { BigEventType } from "../../../utils/event";
 import TitleSet from "../../common/TitleSet";
 import WindowTop from "../../common/WindowTop";
 import styles from "./style.module.css";
+import { VscChevronRight } from "react-icons/vsc";
 
 const DetailUnit = ({
   bigEventData,
@@ -46,8 +48,22 @@ const DetailUnit = ({
               <>
                 <div className={`${styles.eventTime} roboto`}>{event.time}</div>
                 <div key={i}>
-                  {/* <TitleSet title={event.title} subTitle={event.subTitle} /> */}
-                  <p className={styles.eventTitle}>{event.title}</p>
+                  <div className={styles.eventTitleWrapper}>
+                    <TitleSet
+                      title={event.title}
+                      subTitle={event.subTitle}
+                      className={styles.eventTitle}
+                      titleSize="1.5rem"
+                      subTitleSize="1rem"
+                    />
+                    {/* <p className={styles.eventTitle}>{event.title}</p> */}
+                    {event.shouldApply && (
+                      <div className={styles.applyTag}>
+                        事前申込制
+                        <VscChevronRight />
+                      </div>
+                    )}
+                  </div>
                   <p className={styles.eventDescription}>{event.description}</p>
                 </div>
               </>

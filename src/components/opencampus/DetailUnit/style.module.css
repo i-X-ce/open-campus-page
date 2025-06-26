@@ -2,6 +2,7 @@
   display: flex;
   justify-content: center;
   gap: var(--space-ll);
+  max-width: 1400px;
 }
 
 .numContainer {
@@ -20,10 +21,11 @@
 
 .windowContainer {
   min-width: 650px;
-  max-width: 60%;
+  max-width: 55%;
   min-height: 500px;
   background: var(--bc-section);
   position: relative;
+  box-shadow: var(--shadow-regular);
 }
 
 .eventsContainer {
@@ -70,13 +72,33 @@
   text-align: center;
 }
 
-.eventTitle {
-  font-size: 1.5rem;
+.eventTitleWrapper {
+  display: flex;
+  justify-content: space-between;
+  padding-right: var(--space-m);
+  margin-bottom: var(--space-ss);
   border-bottom: 1px solid var(--bc-border);
+}
+
+.eventTitle {
+  padding-bottom: var(--space-ss);
+}
+
+.applyTag {
+  display: flex;
+  align-items: center;
+  gap: var(--space-ss);
+  margin: var(--space-ss);
+  padding: var(--space-ss) var(--space-m);
+  border-radius: 500px;
+  font-size: 0.8rem;
+  color: var(--bc-background);
+  background-color: var(--bc-primary);
 }
 
 .eventDescription {
   color: var(--bc-detail);
+  padding-right: var(--space-m);
 }
 
 .windowFooter {

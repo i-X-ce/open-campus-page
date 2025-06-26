@@ -53,13 +53,13 @@
   box-shadow: var(--shadow-regular);
   background-color: var(--bc-background);
   overflow: hidden;
-  padding-left: var(--space-lll);
+  padding-left: calc(var(--space-lll) * 1.2);
 }
 
 .num {
   position: absolute;
   left: 0px;
-  bottom: -var(--space-l);
+  bottom: calc(-1 * var(--space-l));
   font-size: 12rem;
   opacity: 0.1;
   line-height: 1;
