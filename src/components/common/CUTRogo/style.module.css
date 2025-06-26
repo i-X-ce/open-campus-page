@@ -1,7 +1,7 @@
 .logoCotainer {
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: var(--space-s);
 }
 
 .textColor {

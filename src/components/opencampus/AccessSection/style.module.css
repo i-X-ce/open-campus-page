@@ -1,6 +1,6 @@
 .cotnainer {
   display: flex;
-  margin-top: 100px;
+  margin-top: var(--space-lll);
 }
 
 .windowContainer {
@@ -11,7 +11,7 @@
   background-color: var(--bc-section);
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: var(--space-m);
   padding: 30px;
 }
 
@@ -32,7 +32,7 @@
   flex: 1;
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: var(--space-m);
 }
 
 .imgBox {

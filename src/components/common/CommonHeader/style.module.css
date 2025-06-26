@@ -18,5 +18,5 @@
 .navList {
   list-style: none;
   display: flex;
-  gap: 20px;
+  gap: var(--space-m);
 }

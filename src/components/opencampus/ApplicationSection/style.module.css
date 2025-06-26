@@ -1,13 +1,13 @@
 .topContainer {
   display: flex;
   justify-content: space-between;
-  margin-top: 50px;
+  margin-top: var(--space-ll);
 }
 
 .topTextContainer {
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: var(--space-m);
 }
 
 .topText p {
@@ -23,7 +23,7 @@
 }
 
 .topPointersList {
-  padding-right: 20px;
+  padding-right: var(--space-m);
 }
 
 .topPointersList li {
@@ -43,9 +43,9 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 10px;
+  gap: var(--space-s);
   color: var(--bc-primary);
-  padding: 100px 0;
+  padding: var(--space-lll) 0;
 }
 
 .topApplyButtonText p {
@@ -55,6 +55,6 @@
 .applicationUnitsContainer {
   display: flex;
   flex-direction: column;
-  gap: 20px;
-  margin-top: 50px;
+  gap: var(--space-m);
+  margin-top: var(--space-ll);
 }

@@ -2,48 +2,43 @@ import styles from "./style.module.css";
 
 import TitleSet from "../../common/TitleSet";
 import SubEventButton from "../SubEventButton";
+import type { BigEventType } from "../../../utils/event";
 
 const ProgramCard = ({
-  title,
-  subTitle,
-  description,
-  time,
+  bigEventData,
   num,
   direction = "R",
-  subEvents,
 }: {
-  title: string;
-  subTitle: string;
-  description: string;
-  time: string;
+  bigEventData: BigEventType;
   num: number;
   direction?: "R" | "L";
-  subEvents?: {
-    title: string;
-    id: string;
-  }[];
 }) => {
   return (
-    <div className={`${styles.container} ${styles[`container-${direction}`]}`}>
+    <div className={`${styles.container} ${styles[`container${direction}`]}`}>
       <div className={styles.programBorderWrapper}>
         <div className={styles.programBorder} />
       </div>
       <div className={styles.cardWrapper}>
-        <p className={`${styles.time} big-s`}>{time}</p>
-        <div className={`${styles.card} ${styles[`card-${direction}`]}`}>
+        <p className={`${styles.time} big-s`}>{bigEventData.eventData.time}</p>
+        <div className={`${styles.card}`}>
           <p className={`${styles.num} big-s`}>
             {num.toString().padStart(2, "0")}
           </p>
           <div className={styles.textContainer}>
-            <TitleSet title={title} subTitle={subTitle} />
+            <TitleSet
+              title={bigEventData.eventData.title}
+              subTitle={bigEventData.eventData.subTitle}
+            />
             <div className={styles.border} />
-            <p className={styles.description}>{description}</p>
+            <p className={styles.description}>
+              {bigEventData.eventData.description}
+            </p>
           </div>
         </div>
       </div>
       <div className={styles.subEventsContainer}>
-        {subEvents?.map((event, i) => (
-          <SubEventButton key={i} title={event.title} id={event.id} />
+        {bigEventData.subEvents?.map((event, i) => (
+          <SubEventButton key={i} title={event.subTitle} />
         ))}
       </div>
     </div>

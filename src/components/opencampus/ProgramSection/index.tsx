@@ -4,97 +4,7 @@ import CommonSection from "../../common/CommonSection";
 import SectionTitle from "../../common/SectionTitle";
 import ProgramCard from "../ProgramCard";
 import type { ReactNode } from "react";
-
-type ProgramType = {
-  title: string;
-  subTitle: string;
-  description: string;
-  time: string;
-  subEvents?: {
-    title: string;
-    id: string;
-  }[];
-};
-
-const programs: ProgramType[] = [
-  {
-    title: "留学イベント",
-    subTitle: "RYUUGAKU",
-    description: "留学経験者のトークや留学プログラムを紹介。",
-    time: "10:00 - 12:00",
-    subEvents: [
-      { title: "JAVA", id: "ryuugaku-java" },
-      { title: "C++", id: "ryuugaku-cpp" },
-      { title: "C#", id: "ryuugaku-cs" },
-    ],
-  },
-  {
-    title: "留学イベント",
-    subTitle: "RYUUGAKU",
-    description: "留学経験者のトークや留学プログラムを紹介。",
-    time: "10:00 - 12:00",
-    subEvents: [
-      { title: "JAVA", id: "ryuugaku-java" },
-      { title: "C++", id: "ryuugaku-cpp" },
-      { title: "C#", id: "ryuugaku-cs" },
-    ],
-  },
-  {
-    title: "留学イベント",
-    subTitle: "RYUUGAKU",
-    description: "留学経験者のトークや留学プログラムを紹介。",
-    time: "10:00 - 12:00",
-    subEvents: [
-      { title: "JAVA", id: "ryuugaku-java" },
-      { title: "C++", id: "ryuugaku-cpp" },
-      { title: "C#", id: "ryuugaku-cs" },
-    ],
-  },
-  {
-    title: "留学イベント",
-    subTitle: "RYUUGAKU",
-    description: "留学経験者のトークや留学プログラムを紹介。",
-    time: "10:00 - 12:00",
-    subEvents: [
-      { title: "JAVA", id: "ryuugaku-java" },
-      { title: "C++", id: "ryuugaku-cpp" },
-      { title: "C#", id: "ryuugaku-cs" },
-    ],
-  },
-  {
-    title: "留学イベント",
-    subTitle: "RYUUGAKU",
-    description: "留学経験者のトークや留学プログラムを紹介。",
-    time: "10:00 - 12:00",
-    subEvents: [
-      { title: "JAVA", id: "ryuugaku-java" },
-      { title: "C++", id: "ryuugaku-cpp" },
-      { title: "C#", id: "ryuugaku-cs" },
-    ],
-  },
-  {
-    title: "留学イベント",
-    subTitle: "RYUUGAKU",
-    description: "留学経験者のトークや留学プログラムを紹介。",
-    time: "10:00 - 12:00",
-    subEvents: [
-      { title: "JAVA", id: "ryuugaku-java" },
-      { title: "C++", id: "ryuugaku-cpp" },
-      { title: "C#", id: "ryuugaku-cs" },
-    ],
-  },
-  {
-    title: "留学イベント",
-    subTitle: "RYUUGAKU",
-    description: "留学経験者のトークや留学プログラムを紹介。",
-    time: "10:00 - 12:00",
-    subEvents: [
-      { title: "JAVA", id: "ryuugaku-java" },
-      { title: "C++", id: "ryuugaku-cpp" },
-      { title: "C#", id: "ryuugaku-cs" },
-    ],
-  },
-];
+import { eventsData } from "../../../utils/event";
 
 function ProgramCardWrapper({
   children,
@@ -126,21 +36,17 @@ function ProgramCardWrapper({
 
 const ProgramSection = () => {
   return (
-    <CommonSection backgroundColor="section">
+    <CommonSection>
       <SectionTitle title="PROGRAM" subTitle="プログラム" />
       <div className={styles.cardsContainer}>
-        {programs.map((program, i) => (
+        {eventsData.map((event, i) => (
           <>
             <ProgramCardWrapper index={i}>
               <ProgramCard
                 key={i}
-                title={program.title}
-                subTitle={program.subTitle}
-                description={program.description}
-                time={program.time}
+                bigEventData={event}
                 num={i}
                 direction={i % 2 === 0 ? "R" : "L"}
-                subEvents={program.subEvents}
               />
             </ProgramCardWrapper>
           </>

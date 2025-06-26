@@ -30,7 +30,6 @@ const TitleSet = ({
         {subTitle}
       </p>
       <p
-        className={styles.title}
         style={{
           fontSize: titleSize,
           color: ct2css(titleColor),

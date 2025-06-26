@@ -1,16 +1,16 @@
 .container {
-  --container-margin: 50px;
+  --container-margin: var(--space-ll);
   display: grid;
 }
 
-.container-R {
+.containerR {
   /* margin-left: var(--container-margin); */
   grid-template-areas:
     "border card"
     ". subEvents";
 }
 
-.container-L {
+.containerL {
   /* margin-right: var(--container-margin); */
   grid-template-areas:
     "card border"
@@ -25,7 +25,7 @@
 
 .programBorder {
   grid-area: border;
-  width: 100%;
+  min-width: var(--space-lll);
   height: 1px;
   background-color: var(--bc-border);
 }
@@ -50,15 +50,16 @@
   justify-content: center;
   align-items: end;
   min-height: 200px;
-  box-shadow: var(--shadow-center);
+  box-shadow: var(--shadow-regular);
   background-color: var(--bc-background);
   overflow: hidden;
+  padding-left: var(--space-lll);
 }
 
 .num {
   position: absolute;
   left: 0px;
-  bottom: -40px;
+  bottom: -var(--space-l);
   font-size: 12rem;
   opacity: 0.1;
   line-height: 1;
@@ -67,7 +68,7 @@
 .textContainer {
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: var(--space-s);
 }
 
 .border {
@@ -77,12 +78,13 @@
 
 .description {
   color: var(--bc-detail);
-  padding-right: 20px;
+  padding-right: var(--space-m);
 }
 
 .subEventsContainer {
   grid-area: subEvents;
-  margin-top: 5px;
-  display: flex;
-  gap: 5px;
+  margin-top: var(--space-ss);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-ss);
 }

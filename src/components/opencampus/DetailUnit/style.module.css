@@ -1,6 +1,15 @@
 .container {
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
+  gap: var(--space-ll);
+}
+
+.numContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  max-width: 30%;
 }
 
 .num {
@@ -11,6 +20,7 @@
 
 .windowContainer {
   min-width: 650px;
+  max-width: 60%;
   min-height: 500px;
   background: var(--bc-section);
   position: relative;
@@ -21,23 +31,29 @@
   --time-width: 200px;
   grid-template-columns: var(--time-width) 1fr;
   row-gap: 30px;
-  column-gap: 20px;
-  padding: 20px 0;
+  column-gap: var(--space-m);
+  padding: var(--space-m) 0 var(--space-lll) 0;
 }
 
 .eventTitleContainer {
   display: flex;
-  align-items: center;
-  gap: 5px;
-  border-bottom: 1px solid var(--bc-primary);
-  margin-right: 20px;
+  flex-direction: column;
+  align-items: start;
+  margin-right: var(--space-m);
 }
 
 .eventTitleSet {
   background-color: var(--bc-primary);
-  padding: 5px;
-  padding-right: 20px;
+  padding: var(--space-ss);
+  padding-right: var(--space-m);
   clip-path: polygon(0 0, calc(100% - 10px) 0, 100% 100%, 0% 100%);
+}
+
+.bigEventDescription {
+  border: solid 1px var(--bc-primary);
+  border-right: none;
+  border-left: none;
+  padding: var(--space-m);
 }
 
 .timeBg {
@@ -69,4 +85,5 @@
   width: 100%;
   bottom: 0;
   background-color: var(--bc-primary);
+  z-index: 2;
 }

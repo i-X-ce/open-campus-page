@@ -4,7 +4,7 @@
   background-color: var(--bc-card);
   align-items: center;
   justify-content: end;
-  padding: 5px;
+  padding: var(--space-ss);
   box-shadow: var(--shadow-bottom);
   z-index: 2;
 }
@@ -12,5 +12,5 @@
 .icons {
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: var(--space-s);
 }

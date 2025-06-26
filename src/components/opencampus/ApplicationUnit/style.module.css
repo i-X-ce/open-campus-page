@@ -9,8 +9,8 @@
   flex-direction: column;
   justify-content: center;
   width: 50%;
-  gap: 10px;
-  padding: 0 20px;
+  gap: var(--space-s);
+  padding: 0 var(--space-m);
   z-index: 1;
 }
 
@@ -36,9 +36,9 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  gap: 20px;
+  gap: var(--space-m);
   background-color: var(--bc-section);
-  padding: 20px 0;
+  padding: var(--space-m) 0;
   box-shadow: var(--shadow-regular);
 }
 
@@ -56,7 +56,7 @@
   border: solid 1px var(--bc-primary);
   border-right: none;
   font-size: 1.3rem;
-  padding: 10px 20px;
+  padding: 10px var(--space-m);
   color: var(--bc-primary);
 }
 

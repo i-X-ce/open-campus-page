@@ -1,6 +1,6 @@
 .unitContainer {
   display: flex;
   flex-direction: column;
-  gap: 100px;
-  margin-top: 100px;
+  gap: var(--space-lll);
+  margin-top: var(--space-lll);
 }

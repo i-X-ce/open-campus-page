@@ -19,7 +19,7 @@
 .links {
   display: flex;
   flex-direction: column;
-  gap: 5px;
+  gap: var(--space-ss);
   padding-top: 0.5rem;
 }
 .link {
@@ -39,7 +39,7 @@
   display: flex;
 }
 .linkEndPoint {
-  height: 10px;
+  height: var(--space-s);
   aspect-ratio: 1 / 1;
   border: solid 1px var(--bc-border);
   border-radius: 50%;

@@ -1,5 +1,4 @@
-
 .titleSet {
-  padding: 50px;
-  min-height: 100px;
+  padding: var(--space-ll);
+  min-height: var(--space-lll);
 }

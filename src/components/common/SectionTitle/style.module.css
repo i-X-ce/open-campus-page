@@ -19,7 +19,7 @@
   height: 1rem;
   z-index: 2;
   color: var(--bc-background);
-  padding-right: 100px;
+  padding-right: var(--space-lll);
 }
 
 .subTitle {

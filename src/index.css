@@ -20,6 +20,13 @@
 
   --max-width: 1200px;
   --space-out: 50px; /* 外側のスペース */
+
+  --space-ss: 5px;
+  --space-s: 10px;
+  --space-m: 20px;
+  --space-l: 40px;
+  --space-ll: 50px;
+  --space-lll: 100px;
 }
 
 body {

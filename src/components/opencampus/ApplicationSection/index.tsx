@@ -5,6 +5,7 @@ import SectionTitle from "../../common/SectionTitle";
 import PentagonBox from "../../common/PentagonBox";
 import { VscChevronRight } from "react-icons/vsc";
 import ApplicationUnit from "../ApplicationUnit";
+import { eventsData } from "../../../utils/event";
 
 const ApplicationSection = () => {
   return (
@@ -30,7 +31,7 @@ const ApplicationSection = () => {
             </ul>
           </div>
           <a href="#" className={styles.topApplyButton}>
-            <PentagonBox cutSize="50px" variant="outlined">
+            <PentagonBox cutSize="var(--space-ll)" variant="outlined">
               <div className={styles.topApplyButtonText}>
                 <span>
                   <p>お申込み</p>
@@ -42,18 +43,16 @@ const ApplicationSection = () => {
           </a>
         </div>
         <div className={styles.applicationUnitsContainer}>
-          <ApplicationUnit
-            title="授業体験"
-            subTitle="TAIKEN"
-            description="本物さながらの授業を体験していただきます。たくさんしばいたるから覚悟しときなさい。"
-            events={["JAVA", "C++", "C#"]}
-          />
-          <ApplicationUnit
-            title="授業体験"
-            subTitle="TAIKEN"
-            description="本物さながらの授業を体験していただきます。たくさんしばいたるから覚悟しときなさい。"
-            events={["JAVA", "C++", "C#"]}
-          />
+          {eventsData
+            .filter((e) => {
+              return (
+                e.subEvents &&
+                e.subEvents.filter((sub) => sub.shouldApply).length > 0
+              );
+            })
+            .map((event, i) => (
+              <ApplicationUnit key={i} bigEventData={event} />
+            ))}
         </div>
       </CommonSection>
     </>

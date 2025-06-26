@@ -18,15 +18,15 @@
   display: flex;
   font-size: 10rem;
   line-height: 1;
-  gap: 20px;
+  gap: var(--space-m);
 }
 
 .date {
   display: flex;
-  gap: 10px;
+  gap: var(--space-s);
   font-size: 5rem;
   color: var(--bc-primary);
-  margin-top: 10px;
+  margin-top: var(--space-s);
 }
 
 .day {
@@ -37,13 +37,13 @@
 
 .leftLine,
 .leftLine2 {
-  width: 50px;
+  width: var(--space-ll);
   background-color: var(--bc-primary);
   align-self: stretch;
 }
 
 .leftLine2 {
-  width: 10px;
+  width: var(--space-s);
 }
 
 .windowContainer {

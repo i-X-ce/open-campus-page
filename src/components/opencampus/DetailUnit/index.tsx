@@ -1,30 +1,19 @@
+import type { BigEventType } from "../../../utils/event";
 import TitleSet from "../../common/TitleSet";
 import WindowTop from "../../common/WindowTop";
 import styles from "./style.module.css";
 
-export type DetailUnitEventType = {
-  time: string;
-  title: string;
-  subTitle: string;
-  description: string;
-  isReservation: boolean;
-};
-
 const DetailUnit = ({
+  bigEventData,
   num,
-  title,
-  subTitle,
-  description,
-  events,
   reverse = false,
 }: {
+  bigEventData: BigEventType;
   num: number;
-  title: string;
-  subTitle: string;
-  description: string;
-  events: DetailUnitEventType[];
   reverse?: boolean;
 }) => {
+  const { title, subTitle, description } = bigEventData.eventData;
+
   return (
     <div
       className={styles.container}
@@ -32,28 +21,31 @@ const DetailUnit = ({
         flexDirection: reverse ? "row-reverse" : "row",
       }}
     >
-      <p className={`${styles.num} big-s`}>{num.toString().padStart(2, "0")}</p>
+      <div className={styles.numContainer}>
+        <p className={`${styles.num} big-s`}>
+          {num.toString().padStart(2, "0")}
+        </p>
+        <div className={styles.eventTitleContainer}>
+          <TitleSet
+            title={title}
+            subTitle={subTitle}
+            titleSize="2rem"
+            subTitleSize="1.3rem"
+            titleColor="background"
+            subTitleColor="background"
+            className={styles.eventTitleSet}
+          />
+          <div className={styles.bigEventDescription}>{description}</div>
+        </div>
+      </div>
       <div className={styles.windowContainer}>
-        <div className={styles.window}>
+        <div>
           <WindowTop />
           <div className={styles.eventsContainer}>
-            <div />
-            <div className={styles.eventTitleContainer}>
-              <TitleSet
-                title={title}
-                subTitle={subTitle}
-                titleSize="1.5rem"
-                subTitleSize="1.2rem"
-                titleColor="background"
-                subTitleColor="background"
-                className={styles.eventTitleSet}
-              />
-              <div>{description}</div>
-            </div>
-            {events.map((event, i) => (
+            {bigEventData.subEvents?.map((event, i) => (
               <>
                 <div className={`${styles.eventTime} roboto`}>{event.time}</div>
-                <div className={styles.eventTextContainer} key={i}>
+                <div key={i}>
                   {/* <TitleSet title={event.title} subTitle={event.subTitle} /> */}
                   <p className={styles.eventTitle}>{event.title}</p>
                   <p className={styles.eventDescription}>{event.description}</p>
@@ -61,8 +53,8 @@ const DetailUnit = ({
               </>
             ))}
             <div className={styles.timeBg} />
-            <div className={styles.windowFooter} />
           </div>
+          <div className={styles.windowFooter} />
         </div>
       </div>
     </div>

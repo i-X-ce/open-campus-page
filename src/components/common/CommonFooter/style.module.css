@@ -1,5 +1,5 @@
 .topFooter {
-  padding: 20px 0;
+  padding: var(--space-m) 0;
   background-color: var(--bc-section);
 }
 
@@ -16,9 +16,9 @@
   display: flex;
   justify-content: center;
   font-size: 2rem;
-  gap: 40px;
-  padding: 20px 0;
-  margin: 40px 0;
+  gap: var(--space-l);
+  padding: var(--space-m) 0;
+  margin: var(--space-l) 0;
   border: 1px solid var(--bc-border);
   border-right: none;
   border-left: none;
@@ -27,11 +27,11 @@
 .navs {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 40px;
+  gap: var(--space-l);
 }
 
 .bottomFooter {
-  padding: 20px 0;
+  padding: var(--space-m) 0;
   background-color: var(--bc-primary);
   color: var(--bc-background);
 }
@@ -46,12 +46,12 @@
   display: flex;
   list-style: none;
   font-size: 1.2rem;
-  gap: 10px;
+  gap: var(--space-s);
 }
 .bottomContainerLeft {
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: var(--space-m);
 }
 .bottmContainerRight {
   align-self: flex-end;
