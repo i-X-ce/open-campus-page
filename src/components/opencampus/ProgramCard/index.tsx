@@ -39,9 +39,9 @@ const ProgramCard = ({
         </div>
       </div>
       <div className={styles.subEventsContainer}>
-        {bigEventData.subEvents?.map((event, i) => (
+        {/* {bigEventData.subEvents?.map((event, i) => (
           <SubEventButton key={i} event={event} />
-        ))}
+        ))} */}
       </div>
     </div>
   );

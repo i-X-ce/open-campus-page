@@ -3,8 +3,7 @@
 }
 
 .button {
-  padding: var(--space-s);
-  font-size: 1.6srem;
+  padding: 10px;
   color: var(--bc-primary);
   width: 100%;
   text-align: start;

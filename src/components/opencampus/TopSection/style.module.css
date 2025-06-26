@@ -1,7 +1,8 @@
 .section {
   position: relative;
-  min-height: 90vh;
+  min-height: 800px;
   display: flex;
+  overflow: hidden;
 }
 
 .container {
@@ -12,6 +13,7 @@
   width: 100%;
   max-width: var(--max-width);
   margin: 0 auto;
+  gap: calc(var(--space-lll) * 3);
 }
 
 .textContainer {
@@ -50,4 +52,42 @@
   min-width: 500px;
   min-height: 500px;
   background: var(--bc-section);
+}
+.imgWrapper {
+  position: relative;
+  flex: 1;
+  height: 100%;
+}
+
+.imgContainer {
+  position: absolute;
+  display: grid;
+  grid-template-areas:
+    "i1 i1 i3 i5 i5"
+    "i1 i1 i3 i4 i10"
+    "i2 i2 i3 i4 i10"
+    "i6 i7 i7 i7 i10"
+    "i6 i8 i9 i9 i10"
+    "i6 i8 i9 i9 i10";
+  width: 1000px;
+  aspect-ratio: 1 / 1;
+  background-color: var(--bc-primary);
+  transform: rotate(-10deg) scale(1.3);
+}
+
+.imgContainer::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(10deg, var(--bc-primary), var(--bc-background));
+  opacity: 0.6;
+}
+
+.img {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }

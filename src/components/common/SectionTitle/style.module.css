@@ -1,6 +1,7 @@
 .container {
   position: relative;
   line-height: 1;
+  margin: var(--space-lll) 0;
 }
 
 .titleContainer {

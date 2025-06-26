@@ -35,7 +35,18 @@ const AboutSection = () => {
           </div>
         </div>
         <div className={styles.imgContainer}>
-          <div className={styles.imgContent}></div>
+          <div className={styles.imgContent}>
+            {[1, 4, 8, 13].map((n, i) => (
+              <div
+                key={i}
+                style={{
+                  backgroundImage: `url("/images/image (${n}).jpeg")`,
+                  gridArea: `i${i + 1}`,
+                }}
+                className={styles.img}
+              />
+            ))}
+          </div>
         </div>
       </div>
     </CommonSection>

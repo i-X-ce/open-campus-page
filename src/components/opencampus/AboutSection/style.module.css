@@ -58,9 +58,21 @@
 
 .imgContent {
   position: absolute;
-  border: solid 1px var(--bc-border);
+  display: grid;
+  /* border: solid 1px var(--bc-border); */
   top: 0;
   left: 0;
   width: 50vw;
   height: 100%;
+  grid-template-areas:
+    "i1 i1 i1"
+    "i1 i1 i1"
+    "i2 i3 i4";
+  box-shadow: var(--shadow-regular);
+}
+
+.img {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }

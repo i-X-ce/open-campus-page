@@ -16,8 +16,21 @@ const TopSection = () => {
             </div>
           </div>
         </div>
-        <div className={styles.windowContainer}>
+        {/* <div className={styles.windowContainer}>
           <WindowTop />
+        </div> */}
+        <div className={styles.imgWrapper}>
+          <div className={styles.imgContainer}>
+            {Array.from({ length: 10 }).map((_, i) => (
+              <div
+                className={styles.img}
+                style={{
+                  gridArea: `i${i + 1}`,
+                  backgroundImage: `url("/images/image (${i + 1}).jpeg")`,
+                }}
+              />
+            ))}
+          </div>
         </div>
       </div>
     </section>
