@@ -1,10 +1,17 @@
+.section {
+  position: relative;
+}
+
 .cotnainer {
+  position: relative;
   display: flex;
+  flex-direction: row-reverse;
   margin-top: var(--space-lll);
+  z-index: 2;
 }
 
 .windowContainer {
-  min-width: 70%;
+  width: 60%;
 }
 
 .window {
@@ -14,6 +21,8 @@
   gap: var(--space-m);
   padding: 30px;
   box-shadow: var(--shadow-big);
+  border: solid 1px var(--bc-grass);
+  background: var(--gra-dark);
   border-radius: 0 0 var(--space-ss) var(--space-ss);
 }
 
@@ -25,13 +34,13 @@
   box-shadow: var(--shadow-regular);
 }
 
-.windowTextBox {
+/* .windowTextBox {
   font-size: 1.2rem;
   box-shadow: inset var(--shadow-regular);
   background: var(--gra-shadow);
   padding: var(--space-m);
   color: var(--bc-detail);
-}
+} */
 
 .callNumber {
   font-size: 2rem;
@@ -42,13 +51,21 @@
   flex: 1;
   display: flex;
   flex-direction: column;
-  gap: var(--space-m);
+  align-self: stretch;
+  gap: var(--space-l);
 }
 
 .imgBox {
-  border: 1px solid var(--bc-border);
-  min-height: 200px;
-  margin-left: 30px;
+  display: grid;
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  grid-template-areas:
+    "i4 i3 i1"
+    "i5 i3 i1"
+    "i2 i2 i1";
 }
 
 .detailBorderContainer {
@@ -58,11 +75,29 @@
 .detailBorder {
   position: absolute;
   height: 1px;
+  right: 0;
   background-color: var(--bc-border);
   width: 100vw;
 }
 
 .detailText {
-  padding-left: 30px;
+  position: relative;
+  line-height: 2;
+  z-index: 2;
+}
+
+.img {
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  filter: blur(2px) opacity(0.5) brightness(0.8);
+}
+
+.windowTextBoxInfoContainer {
+  font-size: 1.2rem;
+  box-shadow: inset var(--shadow-regular);
+  background: var(--gra-shadow);
+  padding: var(--space-m);
   color: var(--bc-detail);
 }
