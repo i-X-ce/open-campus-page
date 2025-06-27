@@ -54,6 +54,8 @@
   background: var(--gra-section);
   overflow: hidden;
   padding-left: calc(var(--space-lll) * 1.2);
+  border: solid 1px var(--bc-grass);
+  border-radius: var(--space-ss);
 }
 
 .num {
