@@ -7,10 +7,12 @@ const CommonSection = ({
   children,
   backgroundColor = "background",
   className = "",
+  id = "",
 }: {
   children?: ReactNode;
   backgroundColor?: ColorType;
   className?: string;
+  id?: string;
 }) => {
   return (
     <section
@@ -18,6 +20,7 @@ const CommonSection = ({
       style={{
         backgroundColor: ct2css(backgroundColor),
       }}
+      id={id}
     >
       <div className={styles.container}>{children}</div>
     </section>

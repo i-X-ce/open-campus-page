@@ -8,7 +8,7 @@ import { eventsData } from "../../../utils/event";
 const DetailSection = () => {
   return (
     <>
-      <CommonSection>
+      <CommonSection id="detail-section">
         <SectionTitle title="DETAIL" subTitle="イベント詳細" />
       </CommonSection>
       <div className={styles.unitContainer}>

@@ -7,7 +7,7 @@ import AboutButton2 from "../AboutButton2";
 
 const AboutSection = () => {
   return (
-    <CommonSection>
+    <CommonSection id="about-section">
       <SectionTitle title="ABOUT" subTitle="大学紹介" />
       <div className={styles.container}>
         <div className={styles.textContainer}>

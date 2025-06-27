@@ -7,7 +7,7 @@ import InfomationButton from "../InfomationButton";
 const InfomationSection = () => {
   return (
     <>
-      <CommonSection>
+      <CommonSection id="infomation-section">
         <SectionTitle title="INFORMATION" subTitle="大学情報" />
       </CommonSection>
       <div className={styles.buttonsContainer}>

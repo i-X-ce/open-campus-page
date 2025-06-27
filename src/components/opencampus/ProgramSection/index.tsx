@@ -36,7 +36,7 @@ function ProgramCardWrapper({
 
 const ProgramSection = () => {
   return (
-    <CommonSection backgroundColor="section">
+    <CommonSection backgroundColor="section" id="program-section">
       <SectionTitle title="PROGRAM" subTitle="プログラム" />
       <div className={styles.cardsContainer}>
         {eventsData.map((event, i) => (

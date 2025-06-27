@@ -12,7 +12,7 @@ import ApplicationUnit2 from "../ApplicationUnit2";
 const ApplicationSection = () => {
   return (
     <>
-      <CommonSection backgroundColor="section">
+      <CommonSection backgroundColor="section" id="application-section">
         <SectionTitle title="APPLICATION" subTitle="お申込み" />
         <div className={styles.topContainer}>
           <div className={styles.topTextContainer}>

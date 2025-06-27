@@ -9,7 +9,7 @@ import { getImagePath } from "../../../utils/imagePath";
 const AccessSection = () => {
   return (
     <section className={styles.section}>
-      <CommonSection>
+      <CommonSection id="access-section">
         <span style={{ position: "relative", zIndex: 2 }}>
           <SectionTitle title="ACCESS" subTitle="アクセス" />
         </span>
