@@ -3,6 +3,7 @@ import styles from "./style.module.css";
 import CommonSection from "../../common/CommonSection";
 import SectionTitle from "../../common/SectionTitle";
 import AboutButton from "../AboutButton";
+import AboutButton2 from "../AboutButton2";
 
 const AboutSection = () => {
   return (
@@ -28,10 +29,10 @@ const AboutSection = () => {
           </div>
 
           <div className={styles.buttonsContainer}>
-            <AboutButton title="学校生活" subTitle="STUDENT LIFE" />
-            <AboutButton title="学校生活" subTitle="STUDENT LIFE" />
-            <AboutButton title="学校生活" subTitle="STUDENT LIFE" />
-            <AboutButton title="学校生活" subTitle="STUDENT LIFE" />
+            <AboutButton2 title="学校生活" subTitle="STUDENT LIFE" />
+            <AboutButton2 title="学校生活" subTitle="STUDENT LIFE" />
+            <AboutButton2 title="学校生活" subTitle="STUDENT LIFE" />
+            <AboutButton2 title="学校生活" subTitle="STUDENT LIFE" />
           </div>
         </div>
         <div className={styles.imgContainer}>

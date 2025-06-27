@@ -6,6 +6,7 @@ export type ColorType =
   | "card"
   | "section"
   | "border"
+  | "grass"
   | "shadow";
 
 /**

@@ -1,0 +1,10 @@
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: var(--space-m);
+  border: var(--bc-grass) 1px solid;
+  background: var(--gra-grass);
+}
+.titleContainer {
+}

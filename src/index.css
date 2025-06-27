@@ -12,6 +12,7 @@
   --bc-card2: #727272;
   --bc-section: #5c5c5c;
   --bc-border: #ffffff40;
+  --bc-grass: rgba(255, 255, 255, 0.1);
   --bc-shadow: rgba(0, 0, 0, 0.2);
 
   --gra-shadow: linear-gradient(
@@ -25,6 +26,7 @@
     var(--bc-section) 100%
   );
   --gra-primary: linear-gradient(135deg, var(--bc-primary) 0%, #4a90e2 100%);
+  --gra-grass: linear-gradient(135deg, transparent 0%, var(--bc-grass) 100%);
 
   --shadow-regular: 3px 3px 3px var(--bc-shadow);
   --shadow-bottom: 0px 3px 3px var(--bc-shadow);

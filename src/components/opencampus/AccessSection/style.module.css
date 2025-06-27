@@ -13,20 +13,28 @@
   flex-direction: column;
   gap: var(--space-m);
   padding: 30px;
-  box-shadow: var(--shadow-regular);
+  box-shadow: var(--shadow-big);
 }
 
 .map {
   width: 100%;
   min-height: 500px;
+  border: none;
+  border-radius: var(--space-ss);
+  box-shadow: var(--shadow-regular);
 }
 
 .windowTextBox {
   font-size: 1.2rem;
+  box-shadow: inset var(--shadow-regular);
+  background: var(--gra-shadow);
+  padding: var(--space-m);
+  color: var(--bc-detail);
 }
 
 .callNumber {
   font-size: 2rem;
+  color: var(--bc-primary);
 }
 
 .detailContainer {
