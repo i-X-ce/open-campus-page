@@ -21,6 +21,11 @@
     rgba(255, 255, 255, 0.05) 0%,
     rgba(255, 255, 255, 0.02) 100%
   );
+  --gra-dark: linear-gradient(
+    135deg,
+    rgb(64, 64, 64) 0%,
+    var(--bc-background) 100%
+  );
   --gra-section: linear-gradient(
     135deg,
     var(--bc-shadow) 0%,

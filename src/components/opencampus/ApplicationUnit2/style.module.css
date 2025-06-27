@@ -1,6 +1,7 @@
 .container {
-  background: var(--gra-shadow);
+  background: var(--gra-dark);
   box-shadow: var(--shadow-big);
+  border-radius: var(--space-ss);
 }
 .textContainer {
   padding: var(--space-ll);
@@ -9,7 +10,7 @@
   gap: var(--space-m);
 }
 .textBorder {
-  height: 1px;
+  height: 2px;
   background: var(--gra-primary);
 }
 .description {
