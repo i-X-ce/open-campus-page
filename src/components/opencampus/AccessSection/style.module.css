@@ -14,6 +14,7 @@
   gap: var(--space-m);
   padding: 30px;
   box-shadow: var(--shadow-big);
+  border-radius: 0 0 var(--space-ss) var(--space-ss);
 }
 
 .map {

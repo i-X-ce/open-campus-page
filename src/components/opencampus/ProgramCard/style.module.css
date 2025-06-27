@@ -50,7 +50,7 @@
   justify-content: center;
   align-items: end;
   min-height: 200px;
-  box-shadow: var(--shadow-regular);
+  box-shadow: var(--shadow-big);
   background: var(--gra-section);
   overflow: hidden;
   padding-left: calc(var(--space-lll) * 1.2);
