@@ -12,19 +12,20 @@ const InfomationSection = () => {
       </CommonSection>
       <div className={styles.buttonsContainer}>
         <InfomationButton
-          title="学生生活"
-          subTitle="STUDENT LIFE"
+          title="大学案内"
+          subTitle="UNIVERSITY GUIDE"
           imgNum={10}
         />
         <InfomationButton title="学生生活" subTitle="STUDENT LIFE" imgNum={5} />
         <InfomationButton
-          title="学生生活"
-          subTitle="STUDENT LIFE"
+          title="サークル紹介"
+          subTitle="CIRCLE INTRODUCTION"
           imgNum={11}
         />
+
         <InfomationButton
-          title="学生生活"
-          subTitle="STUDENT LIFE"
+          title="研究室紹介"
+          subTitle="LABORATORY INTRODUCTION"
           imgNum={16}
         />
       </div>

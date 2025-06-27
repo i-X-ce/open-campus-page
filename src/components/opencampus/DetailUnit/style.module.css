@@ -23,7 +23,7 @@
   min-width: 650px;
   max-width: 55%;
   min-height: 500px;
-  background: var(--bc-section);
+  background: var(--gra-section);
   position: relative;
   box-shadow: var(--shadow-regular);
 }
@@ -98,7 +98,7 @@
   border-radius: 500px;
   font-size: 0.8rem;
   color: var(--bc-background);
-  background-color: var(--bc-primary);
+  background: var(--gra-primary);
 }
 
 .eventDescription {

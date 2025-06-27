@@ -2,16 +2,16 @@ import { ct2css, type ColorType } from "../../../utils/colorType";
 import styles from "./style.module.css";
 
 const TitleSet = ({
-  title,
-  subTitle,
+  title = "",
+  subTitle = "",
   titleSize = "2rem",
   subTitleSize = "1.5rem",
   titleColor = "text",
   subTitleColor = "text",
   className = "",
 }: {
-  title: string;
-  subTitle: string;
+  title?: string;
+  subTitle?: string;
   titleSize?: string;
   subTitleSize?: string;
   titleColor?: ColorType;

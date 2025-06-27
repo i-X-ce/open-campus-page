@@ -1,0 +1,51 @@
+.container {
+  background: var(--gra-shadow);
+  box-shadow: var(--shadow-big);
+}
+.textContainer {
+  padding: var(--space-ll);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-m);
+}
+.textBorder {
+  height: 1px;
+  background: var(--gra-primary);
+}
+.description {
+  color: var(--bc-detail);
+}
+.subEventContainer {
+  /* display: grid;
+  grid-template-columns: 1fr 1fr; */
+  display: flex;
+  flex-direction: column;
+  /* padding: var(--space-s); */
+  gap: var(--space-m);
+}
+.eventButton {
+  position: relative;
+  background: var(--bc-section);
+  overflow: hidden;
+  box-shadow: var(--shadow-regular);
+}
+.eventButtonText {
+  position: relative;
+  display: flex;
+  padding: var(--space-m) var(--space-m);
+  justify-content: space-between;
+  align-items: center;
+  z-index: 2;
+}
+
+.buttonBack {
+  position: absolute;
+  background: var(--gra-primary);
+  width: 20%;
+  height: 100%;
+  right: -20px;
+  clip-path: polygon(40px 0%, 100% 0, 100% 100%, 0% 100%);
+}
+.subEventTitle {
+  font-size: 1.2rem;
+}

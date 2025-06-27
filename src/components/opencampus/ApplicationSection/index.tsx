@@ -6,6 +6,8 @@ import PentagonBox from "../../common/PentagonBox";
 import { VscChevronRight } from "react-icons/vsc";
 import ApplicationUnit from "../ApplicationUnit";
 import { eventsData } from "../../../utils/event";
+import { IoIosArrowDropright } from "react-icons/io";
+import ApplicationUnit2 from "../ApplicationUnit2";
 
 const ApplicationSection = () => {
   return (
@@ -29,9 +31,16 @@ const ApplicationSection = () => {
               <li>電話・メールからでも申し込みいただけます。</li>
               <li>キャンセルの場合は電話もしくはメールにてご連絡ください。</li>
             </ul>
+            <div className={styles.arrowRightContainer}>
+              <IoIosArrowDropright />
+            </div>
           </div>
-          <a href="#" className={styles.topApplyButton}>
-            <PentagonBox cutSize="var(--space-ll)" variant="outlined">
+          {/* <a href="#" className={styles.topApplyButton}>
+            <PentagonBox
+              cutSize="var(--space-ll)"
+              variant="outlined"
+              classNameOuter={styles.topApplyButtonBox}
+            >
               <div className={styles.topApplyButtonText}>
                 <span>
                   <p>お申込み</p>
@@ -40,7 +49,7 @@ const ApplicationSection = () => {
                 <VscChevronRight size={"2rem"} />
               </div>
             </PentagonBox>
-          </a>
+          </a> */}
         </div>
         <div className={styles.applicationUnitsContainer}>
           {eventsData
@@ -51,7 +60,7 @@ const ApplicationSection = () => {
               );
             })
             .map((event, i) => (
-              <ApplicationUnit key={i} bigEventData={event} />
+              <ApplicationUnit2 key={i} bigEventData={event} />
             ))}
         </div>
       </CommonSection>

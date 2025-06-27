@@ -22,6 +22,10 @@
 
 .saikyou {
   color: var(--bc-primary);
+  background: var(--gra-primary);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
 
 .textBorder {
