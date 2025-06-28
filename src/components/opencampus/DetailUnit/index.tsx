@@ -70,8 +70,10 @@ const DetailUnit = ({
                     {/* <p className={styles.eventTitle}>{event.title}</p> */}
                     {event.shouldApply && (
                       <div className={styles.applyTag}>
-                        事前申込制
-                        <VscChevronRight />
+                        <span className={styles.applyText}>
+                          <p>事前申込制</p>
+                          <VscChevronRight className={styles.applyTagArrow}/>
+                        </span>
                       </div>
                     )}
                   </div>

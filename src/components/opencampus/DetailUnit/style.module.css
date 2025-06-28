@@ -127,13 +127,31 @@
 .applyTag {
   display: flex;
   align-items: center;
-  gap: var(--space-ss);
+  user-select: none;
+  cursor: pointer;
   margin: var(--space-ss);
   padding: var(--space-ss) var(--space-m);
   border-radius: 500px;
   font-size: 0.8rem;
   color: var(--bc-background);
   background: var(--gra-primary);
+  box-shadow: var(--shadow-regular);
+}
+
+.applyText {
+  display: flex;
+  align-items: center;
+  gap: var(--space-ss);
+}
+
+.applyTagArrow {
+  position: relative;
+  left: 0;
+  transition: left 0.3s;
+}
+
+.applyTag:hover .applyTagArrow {
+  left: var(--space-ss);
 }
 
 .eventDescription {
