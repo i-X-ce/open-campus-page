@@ -1,0 +1,70 @@
+.button {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  padding: var(--space-l);
+  font-size: 2rem;
+  background: var(--gra-grass);
+  border: solid 1px var(--bc-grass);
+  border-radius: var(--space-ss);
+  color: var(--bc-primary);
+  box-shadow: var(--shadow-big);
+  transition: box-shadow 0.3s, border 0.3s, color 0.3s;
+}
+
+.button:hover {
+  border: 1px solid var(--bc-primary);
+  box-shadow: 0 0 20px var(--bc-primary);
+}
+
+.back {
+  position: absolute;
+  height: 100%;
+  left: 0;
+  width: calc(var(--space-l) + var(--space-m));
+  background: var(--gra-primary);
+  clip-path: polygon(0 0, 100% 0, calc(100% - var(--space-l)) 100%, 0% 100%);
+  transition: width 0.3s;
+}
+
+.button:hover .back {
+  width: calc(100% - var(--space-l));
+}
+
+.textContainer {
+  position: relative;
+  display: flex;
+  top: 0;
+  gap: var(--space-l);
+  z-index: 2;
+  transition: top 0.3s, color 0.3s;
+}
+
+.button:hover .textContainer {
+  color: var(--bc-background);
+  top: var(--space-ss);
+}
+
+.textContainer p {
+  line-height: 1.1;
+  font-weight: 700;
+  background: var(--gra-primary);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  transition: background 0.3s;
+}
+
+.button:hover .textContainer p {
+  background: var(--gra-dark);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.accent {
+  position: absolute;
+  display: none;
+}

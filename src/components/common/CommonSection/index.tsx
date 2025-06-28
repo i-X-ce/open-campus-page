@@ -8,17 +8,20 @@ const CommonSection = ({
   backgroundColor = "background",
   className = "",
   id = "",
+  insetShadow = false,
 }: {
   children?: ReactNode;
   backgroundColor?: ColorType;
   className?: string;
   id?: string;
+  insetShadow?: boolean;
 }) => {
   return (
     <section
       className={`${styles.section} ${className}`}
       style={{
         backgroundColor: ct2css(backgroundColor),
+        ...(insetShadow && { boxShadow: "inset var(--shadow-big)" }),
       }}
       id={id}
     >

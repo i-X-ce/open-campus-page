@@ -2,6 +2,7 @@
 
 import AboutSection from "../AboutSection";
 import AccessSection from "../AccessSection";
+import ApplicationButtonSection from "../ApplicationButtonSection";
 import ApplicationSection from "../ApplicationSection";
 import DetailSection from "../DetailSection";
 import InfomationSection from "../InfomationSection";
@@ -12,6 +13,7 @@ const OpencampusPageContent = () => {
   return (
     <div>
       <HeloSection />
+      <ApplicationButtonSection />
       <ProgramSection />
       <DetailSection />
       <ApplicationSection />
