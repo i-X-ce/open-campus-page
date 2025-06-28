@@ -101,6 +101,7 @@
   position: absolute;
   right: calc(-1 * var(--space-m));
   bottom: var(--space-s);
+  color: var(--bc-detail);
   transition: right 0.3s;
 }
 
