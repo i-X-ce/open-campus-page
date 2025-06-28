@@ -194,3 +194,7 @@ export const eventsData: BigEventType[] = [
     ],
   },
 ];
+
+export function getEventId(event: EventType): string {
+  return event.subTitle.split(" ").join("-").toLowerCase();
+}

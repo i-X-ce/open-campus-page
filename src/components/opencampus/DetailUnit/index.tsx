@@ -1,4 +1,4 @@
-import type { BigEventType } from "../../../utils/event";
+import { getEventId, type BigEventType } from "../../../utils/event";
 import PopupImage from "../../common/PopupImage";
 import TitleSet from "../../common/TitleSet";
 import WindowTop from "../../common/WindowTop";
@@ -22,6 +22,7 @@ const DetailUnit = ({
 
   return (
     <div
+      id={getEventId(bigEventData.eventData)}
       className={styles.container}
       style={{
         flexDirection: reverse ? "row-reverse" : "row",

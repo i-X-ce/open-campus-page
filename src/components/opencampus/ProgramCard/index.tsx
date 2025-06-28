@@ -1,8 +1,8 @@
 import styles from "./style.module.css";
 
 import TitleSet from "../../common/TitleSet";
-import SubEventButton from "../SubEventButton";
-import type { BigEventType } from "../../../utils/event";
+// import SubEventButton from "../SubEventButton";
+import { getEventId, type BigEventType } from "../../../utils/event";
 import { VscChevronRight } from "react-icons/vsc";
 
 const ProgramCard = ({
@@ -21,7 +21,10 @@ const ProgramCard = ({
       </div>
       <div className={styles.cardWrapper}>
         <p className={`${styles.time} big-s`}>{bigEventData.eventData.time}</p>
-        <a className={`${styles.card}`} href="#">
+        <a
+          className={`${styles.card}`}
+          href={`#${getEventId(bigEventData.eventData)}`}
+        >
           <div className={styles.cardBack} />
           <p className={`${styles.num} big-s`}>
             {num.toString().padStart(2, "0")}
