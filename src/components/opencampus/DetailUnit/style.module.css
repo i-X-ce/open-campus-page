@@ -1,4 +1,5 @@
 .container {
+  position: relative;
   display: flex;
   justify-content: center;
   gap: var(--space-ll);
@@ -7,11 +8,17 @@
 }
 
 .numContainer {
+  position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   max-width: 30%;
+  z-index: 10;
+  /* padding: var(--space-s); */
+  /* backdrop-filter: blur(5px) brightness(0.8); */
+  /* border: solid 1px var(--bc-grass); */
+  border-radius: var(--space-ss);
 }
 
 .num {
@@ -42,7 +49,6 @@
   display: flex;
   flex-direction: column;
   align-items: start;
-  margin-right: var(--space-m);
 }
 
 .eventTitleSet {
@@ -57,6 +63,34 @@
   border-right: none;
   border-left: none;
   padding: var(--space-m);
+}
+
+.imgContainerL,
+.imgContainerR {
+  position: absolute;
+  --diff: calc(var(--space-lll) * -1);
+  top: var(--diff);
+}
+
+.imgContainerR {
+  right: var(--diff);
+}
+
+.imgContainerL {
+  left: var(--diff);
+}
+
+.img2 {
+  position: absolute;
+  top: 50%;
+}
+
+.imgContainerL .img2 {
+  left: -50%;
+}
+
+.imgContainerR .img2 {
+  right: -50%;
 }
 
 .timeBg {

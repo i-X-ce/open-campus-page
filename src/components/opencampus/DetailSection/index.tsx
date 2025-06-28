@@ -18,6 +18,8 @@ const DetailSection = () => {
             bigEventData={event}
             num={i}
             reverse={i % 2 === 1}
+            imageNum1={event.eventData.imageNum?.[0]}
+            imageNum2={event.eventData.imageNum?.[1]}
           />
         ))}
       </div>

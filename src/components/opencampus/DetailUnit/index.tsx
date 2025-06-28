@@ -1,4 +1,5 @@
 import type { BigEventType } from "../../../utils/event";
+import PopupImage from "../../common/PopupImage";
 import TitleSet from "../../common/TitleSet";
 import WindowTop from "../../common/WindowTop";
 import styles from "./style.module.css";
@@ -8,10 +9,14 @@ const DetailUnit = ({
   bigEventData,
   num,
   reverse = false,
+  imageNum1 = 1,
+  imageNum2 = 2,
 }: {
   bigEventData: BigEventType;
   num: number;
   reverse?: boolean;
+  imageNum1?: number;
+  imageNum2?: number;
 }) => {
   const { title, subTitle, description } = bigEventData.eventData;
 
@@ -22,6 +27,12 @@ const DetailUnit = ({
         flexDirection: reverse ? "row-reverse" : "row",
       }}
     >
+      <div className={styles[`imgContainer${reverse ? "R" : "L"}`]}>
+        <PopupImage imgNum={imageNum1} />
+        <div className={styles.img2}>
+          <PopupImage imgNum={imageNum2} />
+        </div>
+      </div>
       <div className={styles.numContainer}>
         <p className={`${styles.num} big-s`}>
           {num.toString().padStart(2, "0")}

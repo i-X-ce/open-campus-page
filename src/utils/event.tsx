@@ -4,7 +4,7 @@ export interface EventType {
   description: string;
   time: string;
   shouldApply: boolean;
-  imageUrl?: string;
+  imageNum?: number[];
 }
 
 export interface BigEventType {
@@ -21,6 +21,7 @@ export const eventsData: BigEventType[] = [
         "電脳工科大学の学長が、最新のテクノロジーが社会に与える影響と、未来を担う若者への期待について語ります。",
       time: "10:00 - 11:00",
       shouldApply: false,
+      imageNum: [3, 8],
     },
     subEvents: [
       {
@@ -65,6 +66,7 @@ export const eventsData: BigEventType[] = [
         "実際の授業を体験できるチャンスです。興味のある分野の授業を選んで、大学の学びの雰囲気を味わってみましょう。",
       time: "11:15 - 12:15",
       shouldApply: true,
+      imageNum: [14, 10],
     },
     subEvents: [
       {
@@ -109,6 +111,7 @@ export const eventsData: BigEventType[] = [
         "在学生が、実際の大学生活や受験体験談、サークル活動などについて本音で語ります。質問も大歓迎です！",
       time: "13:00 - 14:00",
       shouldApply: false,
+      imageNum: [11, 9],
     },
     subEvents: [
       {
@@ -153,6 +156,7 @@ export const eventsData: BigEventType[] = [
         "最先端の研究が行われている研究室を公開します。普段見ることのできない研究設備や成果を間近でご覧ください。",
       time: "14:15 - 15:15",
       shouldApply: true,
+      imageNum: [16, 1],
     },
     subEvents: [
       {

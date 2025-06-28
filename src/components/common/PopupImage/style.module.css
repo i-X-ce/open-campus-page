@@ -1,0 +1,11 @@
+.container {
+  box-shadow: var(--shadow-regular);
+}
+
+.imgBox {
+  aspect-ratio: 3/2;
+  background: var(--bc-section);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
