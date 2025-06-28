@@ -17,19 +17,26 @@
   color: var(--bc-detail);
 }
 .subEventContainer {
-  /* display: grid;
-  grid-template-columns: 1fr 1fr; */
   display: flex;
   flex-direction: column;
-  /* padding: var(--space-s); */
   gap: var(--space-m);
 }
+
 .eventButton {
   position: relative;
-  background: var(--bc-section);
+  background: var(--gra-grass);
+  border: solid 1px var(--bc-grass);
   overflow: hidden;
   box-shadow: var(--shadow-regular);
+  border-radius: var(--space-ss);
+  transition: 0.3s;
 }
+
+.eventButton:hover {
+  border: solid 1px var(--bc-primary);
+  box-shadow: 0px 0px 10px var(--bc-primary);
+}
+
 .eventButtonText {
   position: relative;
   display: flex;
@@ -42,11 +49,22 @@
 .buttonBack {
   position: absolute;
   background: var(--gra-primary);
-  width: 20%;
+  width: var(--space-lll);
   height: 100%;
-  right: -20px;
-  clip-path: polygon(40px 0%, 100% 0, 100% 100%, 0% 100%);
+  right: 0;
+  clip-path: polygon(var(--space-l) 0%, 100% 0, 100% 100%, 0% 100%);
+  transition: width 0.3s;
 }
+
+.eventButton:hover .buttonBack {
+  width: calc(100% + var(--space-m));
+}
+
 .subEventTitle {
   font-size: 1.2rem;
+  transition: color 0.3s;
+}
+
+.eventButton:hover .subEventTitle {
+  color: var(--bc-background);
 }
