@@ -19,7 +19,7 @@ const CommonHeader = () => {
           {LINKS.map((link) => (
             <li key={link} className={styles.navItem}>
               <a href={`#${link.toLowerCase().toLowerCase()}-section`}>
-                {link}
+                <p className={styles.linkText}>{link}</p>
               </a>
             </li>
           ))}
