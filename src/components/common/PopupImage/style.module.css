@@ -3,6 +3,7 @@
 }
 
 .imgBox {
+  width: 350px;
   aspect-ratio: 3/2;
   background: var(--bc-section);
   background-size: cover;

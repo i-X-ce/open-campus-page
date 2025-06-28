@@ -5,9 +5,24 @@
 .cotnainer {
   position: relative;
   display: flex;
-  flex-direction: row-reverse;
+  justify-content: space-between;
   margin-top: var(--space-lll);
   z-index: 2;
+}
+
+.imgWindowsContainer {
+  display: flex;
+  flex-direction: column;
+}
+
+.imgWindow {
+  margin: calc(var(--space-ll) * -1) 0;
+}
+
+.imgWindow:nth-child(even) {
+  position: relative;
+  right: 50%;
+  z-index: 3;
 }
 
 .windowContainer {

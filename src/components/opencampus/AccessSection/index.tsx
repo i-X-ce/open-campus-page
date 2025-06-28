@@ -5,6 +5,7 @@ import SectionTitle from "../../common/SectionTitle";
 import WindowTop from "../../common/WindowTop";
 import { CUTInfo } from "../../../utils/CUTInfo";
 import { getImagePath } from "../../../utils/imagePath";
+import PopupImage from "../../common/PopupImage";
 
 const AccessSection = () => {
   return (
@@ -14,6 +15,16 @@ const AccessSection = () => {
           <SectionTitle title="ACCESS" subTitle="アクセス" />
         </span>
         <div className={styles.cotnainer}>
+          <div className={styles.imgWindowsContainer}>
+            {[17, 18, 19, 20].map((n, i) => (
+              <PopupImage
+                key={i}
+                imgNum={n}
+                size="400px"
+                className={styles.imgWindow}
+              />
+            ))}
+          </div>
           <div className={styles.windowContainer}>
             <WindowTop />
             <div className={styles.window}>
