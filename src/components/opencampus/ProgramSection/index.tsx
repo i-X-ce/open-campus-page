@@ -39,6 +39,9 @@ const ProgramSection = () => {
     <CommonSection id="program-section">
       <SectionTitle title="PROGRAM" subTitle="プログラム" />
       <div className={styles.cardsContainer}>
+        <div />
+        <div className={styles.borderPoint} />
+        <div />
         {eventsData.map((event, i) => (
           <>
             <ProgramCardWrapper index={i}>
@@ -51,6 +54,9 @@ const ProgramSection = () => {
             </ProgramCardWrapper>
           </>
         ))}
+        <div />
+        <div className={styles.borderPoint} />
+        <div />
       </div>
     </CommonSection>
   );
