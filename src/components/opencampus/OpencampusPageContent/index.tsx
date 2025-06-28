@@ -7,7 +7,7 @@ import ApplicationSection from "../ApplicationSection";
 import DetailSection from "../DetailSection";
 import InfomationSection from "../InfomationSection";
 import ProgramSection from "../ProgramSection";
-import HeloSection from "../TopSection";
+import HeloSection from "../HeloSection";
 
 const OpencampusPageContent = () => {
   return (
