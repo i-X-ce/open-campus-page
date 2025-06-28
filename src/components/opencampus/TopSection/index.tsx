@@ -1,9 +1,9 @@
 import styles from "./style.module.css";
 import WindowTop from "../../common/WindowTop";
 
-const TopSection = () => {
+const HeloSection = () => {
   return (
-    <section className={styles.section}>
+    <section className={styles.section} id="hero-section">
       <div className={styles.container}>
         <div className={`${styles.textContainer} big-s`}>
           <div className={styles.leftLine} />
@@ -37,4 +37,4 @@ const TopSection = () => {
   );
 };
 
-export default TopSection;
+export default HeloSection;

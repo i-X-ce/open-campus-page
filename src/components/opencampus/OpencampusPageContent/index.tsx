@@ -6,12 +6,12 @@ import ApplicationSection from "../ApplicationSection";
 import DetailSection from "../DetailSection";
 import InfomationSection from "../InfomationSection";
 import ProgramSection from "../ProgramSection";
-import TopSection from "../TopSection";
+import HeloSection from "../TopSection";
 
 const OpencampusPageContent = () => {
   return (
     <div>
-      <TopSection />
+      <HeloSection />
       <ProgramSection />
       <DetailSection />
       <ApplicationSection />

@@ -8,7 +8,10 @@ const CUTRogo = ({ variant = "header" }: { variant?: "header" | "footer" }) => {
     variant === "header" ? styles.accent : styles.accentFooter;
 
   return (
-    <div className={`${styles.logoCotainer} ${textColorClass}`}>
+    <a
+      href="#hero-section"
+      className={`${styles.logoCotainer} ${textColorClass}`}
+    >
       <LuBrainCircuit className={styles.logo} />
       <div className={styles.titleContainer}>
         <p className={`${styles.subTitle} big-s`}>
@@ -19,7 +22,7 @@ const CUTRogo = ({ variant = "header" }: { variant?: "header" | "footer" }) => {
         </p>
         <p className={styles.title}>電脳工科大学</p>
       </div>
-    </div>
+    </a>
   );
 };
 
