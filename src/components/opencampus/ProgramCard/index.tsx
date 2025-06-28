@@ -3,6 +3,7 @@ import styles from "./style.module.css";
 import TitleSet from "../../common/TitleSet";
 import SubEventButton from "../SubEventButton";
 import type { BigEventType } from "../../../utils/event";
+import { VscChevronRight } from "react-icons/vsc";
 
 const ProgramCard = ({
   bigEventData,
@@ -20,7 +21,8 @@ const ProgramCard = ({
       </div>
       <div className={styles.cardWrapper}>
         <p className={`${styles.time} big-s`}>{bigEventData.eventData.time}</p>
-        <div className={`${styles.card}`}>
+        <a className={`${styles.card}`} href="#">
+          <div className={styles.cardBack} />
           <p className={`${styles.num} big-s`}>
             {num.toString().padStart(2, "0")}
           </p>
@@ -31,12 +33,17 @@ const ProgramCard = ({
               titleSize="1.5rem"
               subTitleSize="1rem"
             />
-            <div className={styles.border} />
+
+            <div className={styles.borderWrapper}>
+              <VscChevronRight className={styles.arrow} />
+              <div className={styles.border} />
+            </div>
+
             <p className={styles.description}>
               {bigEventData.eventData.description}
             </p>
           </div>
-        </div>
+        </a>
       </div>
       <div className={styles.subEventsContainer}>
         {/* {bigEventData.subEvents?.map((event, i) => (

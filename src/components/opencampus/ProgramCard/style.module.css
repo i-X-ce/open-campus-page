@@ -56,6 +56,26 @@
   padding-left: calc(var(--space-lll) * 1.2);
   border: solid 1px var(--bc-grass);
   border-radius: var(--space-ss);
+  transition: transform 0.3s;
+}
+
+.cardWrapper:hover .card {
+  transform: translateY(var(--space-ss));
+}
+
+.cardBack {
+  position: absolute;
+  width: var(--space-m);
+  aspect-ratio: 1/1;
+  top: 0;
+  right: 0;
+  background: var(--gra-primary);
+  clip-path: polygon(100% 0, 0 0, 100% 100%);
+  transition: width 0.3s;
+}
+
+.cardWrapper:hover .cardBack {
+  width: var(--space-l);
 }
 
 .num {
@@ -71,6 +91,21 @@
   display: flex;
   flex-direction: column;
   gap: var(--space-s);
+}
+
+.borderWrapper {
+  position: relative;
+}
+
+.arrow {
+  position: absolute;
+  right: calc(-1 * var(--space-m));
+  bottom: var(--space-s);
+  transition: right 0.3s;
+}
+
+.cardWrapper:hover .arrow {
+  right: var(--space-s);
 }
 
 .border {
