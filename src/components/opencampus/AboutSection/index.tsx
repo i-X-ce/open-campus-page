@@ -29,10 +29,13 @@ const AboutSection = () => {
           </div>
 
           <div className={styles.buttonsContainer}>
+            <AboutButton2 title="大学案内" subTitle="UNIVERSITY GUIDE" />
             <AboutButton2 title="学校生活" subTitle="STUDENT LIFE" />
-            <AboutButton2 title="学校生活" subTitle="STUDENT LIFE" />
-            <AboutButton2 title="学校生活" subTitle="STUDENT LIFE" />
-            <AboutButton2 title="学校生活" subTitle="STUDENT LIFE" />
+            <AboutButton2 title="サークル紹介" subTitle="CIRCLE INTRODUCTION" />
+            <AboutButton2
+              title="研究室紹介"
+              subTitle="LABORATORY INTRODUCTION"
+            />
           </div>
         </div>
         <div className={styles.imgContainer}>

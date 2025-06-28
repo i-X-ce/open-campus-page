@@ -19,7 +19,8 @@ const AboutButton2 = ({
         subTitleSize="1rem"
         subTitleColor="detail"
       />
-      <VscChevronRight style={{ color: ct2css("primary") }} />
+      <VscChevronRight className={styles.arrow}/>
+      <div className={styles.back} />
     </a>
   );
 };
