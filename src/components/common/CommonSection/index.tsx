@@ -4,6 +4,8 @@ import styles from "./style.module.css";
 
 import type { ReactNode } from "react";
 
+export const sectionInView = "sectionInView"; // 共通のアニメーションバリアント
+
 const CommonSection = ({
   children,
   backgroundColor = "background",
@@ -25,7 +27,7 @@ const CommonSection = ({
         ...(insetShadow && { boxShadow: "inset var(--shadow-big)" }),
       }}
       id={id}
-      whileInView="sectionInView"
+      whileInView={sectionInView}
       viewport={{ amount: 0.5 }}
     >
       <div className={styles.container}>{children}</div>

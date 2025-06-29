@@ -21,11 +21,21 @@
 }
 
 .saikyou {
+  position: relative;
+  font-size: 3.5rem;
   color: var(--bc-primary);
   background: var(--gra-primary);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
+}
+
+.saikyouBack {
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 100%;
+  background: var(--gra-primary);
 }
 
 .textBorder {
