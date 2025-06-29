@@ -1,3 +1,11 @@
+.containerWrapper {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  padding: var(--space-ll) 0;
+}
+
 .container {
   position: relative;
   display: flex;
@@ -5,6 +13,27 @@
   gap: var(--space-ll);
   max-width: 1600px;
   margin: var(--space-ll) 0;
+}
+
+.containerBackWrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-top: 1px solid var(--bc-primary-trans);
+  transform: skewY(3deg);
+}
+
+.containerBack {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -2;
+  background: var(--bc-section);
+  box-shadow: var(--shadow-big);
 }
 
 .numContainer {
@@ -108,6 +137,9 @@
 }
 
 .eventDetailContainer {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-ss);
   border-left: solid 1px var(--bc-primary);
   padding-left: var(--space-m);
 }
@@ -116,12 +148,15 @@
   display: flex;
   justify-content: space-between;
   padding-right: var(--space-m);
-  margin-bottom: var(--space-ss);
-  border-bottom: 1px solid var(--bc-border);
 }
 
 .eventTitle {
   padding-bottom: var(--space-ss);
+}
+
+.eventTitleBorder {
+  height: 1px;
+  background-color: var(--bc-border);
 }
 
 .applyTag {

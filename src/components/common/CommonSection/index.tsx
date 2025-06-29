@@ -1,3 +1,4 @@
+import { motion } from "motion/react";
 import { ct2css, type ColorType } from "../../../utils/colorType";
 import styles from "./style.module.css";
 
@@ -17,16 +18,17 @@ const CommonSection = ({
   insetShadow?: boolean;
 }) => {
   return (
-    <section
+    <motion.section
       className={`${styles.section} ${className}`}
       style={{
         backgroundColor: ct2css(backgroundColor),
         ...(insetShadow && { boxShadow: "inset var(--shadow-big)" }),
       }}
       id={id}
+      whileInView="sectionInView"
     >
       <div className={styles.container}>{children}</div>
-    </section>
+    </motion.section>
   );
 };
 
