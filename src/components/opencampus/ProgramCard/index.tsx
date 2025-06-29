@@ -4,23 +4,47 @@ import TitleSet from "../../common/TitleSet";
 // import SubEventButton from "../SubEventButton";
 import { getEventId, type BigEventType } from "../../../utils/event";
 import { VscChevronRight } from "react-icons/vsc";
+import { motion } from "motion/react";
+import { sectionInView } from "../../common/CommonSection";
 
 const ProgramCard = ({
   bigEventData,
   num,
   direction = "R",
+  delay,
+  duration,
 }: {
   bigEventData: BigEventType;
   num: number;
   direction?: "R" | "L";
+  delay: number;
+  duration: number;
 }) => {
   return (
     <div className={`${styles.container} ${styles[`container${direction}`]}`}>
       <div className={styles.programBorderWrapper}>
-        <div className={styles.programBorder} />
+        <motion.div
+          className={styles[`programBorder${direction}`]}
+          initial={{ width: 0 }}
+          variants={{ [sectionInView]: { width: "100%" } }}
+          transition={{ delay, duration, ease: "linear" }}
+        />
       </div>
-      <div className={styles.cardWrapper}>
-        <p className={`${styles.time} big-s`}>{bigEventData.eventData.time}</p>
+      <motion.div
+        className={styles.cardWrapper}
+        initial={{ opacity: 0, y: 50 }}
+        variants={{ [sectionInView]: { opacity: 1, y: 0 } }}
+        transition={{ type: "spring", delay: delay + duration }}
+      >
+        <p className={`${styles.time} big-s`}>
+          {bigEventData.eventData.time}
+          <motion.div
+            className={styles.timeBack}
+            initial={{ width: "100%" }}
+            variants={{ [sectionInView]: { width: 0 } }}
+            transition={{ delay: delay + duration * 2 }}
+          />
+        </p>
         <a
           className={`${styles.card}`}
           href={`#${getEventId(bigEventData.eventData)}`}
@@ -35,6 +59,7 @@ const ProgramCard = ({
               subTitle={bigEventData.eventData.subTitle}
               titleSize="1.5rem"
               subTitleSize="1rem"
+              subTitleColor="detail"
             />
 
             <div className={styles.borderWrapper}>
@@ -47,7 +72,7 @@ const ProgramCard = ({
             </p>
           </div>
         </a>
-      </div>
+      </motion.div>
       <div className={styles.subEventsContainer}>
         {/* {bigEventData.subEvents?.map((event, i) => (
           <SubEventButton key={i} event={event} />

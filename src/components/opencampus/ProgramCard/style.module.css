@@ -18,16 +18,27 @@
 }
 
 .programBorderWrapper {
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
+  min-width: var(--space-lll);
 }
 
-.programBorder {
+.programBorderR,
+.programBorderL {
+  position: absolute;
   grid-area: border;
-  min-width: var(--space-lll);
   height: 1px;
   background-color: var(--bc-border);
+}
+
+.programBorderL {
+  right: 0;
+}
+
+.programBorderR {
+  left: 0;
 }
 
 .cardWrapper {
@@ -37,10 +48,20 @@
 
 .time {
   --font-size: 2rem;
+
+  position: relative;
   position: absolute;
   font-size: var(--font-size);
   top: calc(var(--font-size) * (-1.2));
   color: var(--bc-detail);
+}
+
+.timeBack {
+  position: absolute;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: var(--bc-detail);
 }
 
 .card {
