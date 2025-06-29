@@ -4,11 +4,22 @@ import type { BigEventType } from "../../../utils/event";
 import TitleSet from "../../common/TitleSet";
 import { VscChevronRight } from "react-icons/vsc";
 import { ct2css } from "../../../utils/colorType";
+import { motion, type MotionNodeOptions } from "motion/react";
 
-const ApplicationUnit2 = ({ bigEventData }: { bigEventData: BigEventType }) => {
+const ApplicationUnit2 = ({
+  bigEventData,
+  inViewVariant,
+  delay = 0,
+  motionData,
+}: {
+  bigEventData: BigEventType;
+  inViewVariant?: string;
+  delay?: number;
+  motionData?: MotionNodeOptions;
+}) => {
   const { title, subTitle, description } = bigEventData.eventData;
   return (
-    <div className={styles.container}>
+    <motion.div className={styles.container} {...motionData}>
       <div className={styles.textContainer}>
         <TitleSet
           title={title}
@@ -40,7 +51,7 @@ const ApplicationUnit2 = ({ bigEventData }: { bigEventData: BigEventType }) => {
           ))}
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 };
 

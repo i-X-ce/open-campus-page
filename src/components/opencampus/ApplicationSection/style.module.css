@@ -1,3 +1,7 @@
+.section {
+  overflow: hidden;
+}
+
 .topContainer {
   position: relative;
   display: flex;
