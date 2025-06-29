@@ -1,11 +1,17 @@
 import styles from "./style.module.css";
 
-import CommonSection from "../../common/CommonSection";
+import CommonSection, { sectionInView } from "../../common/CommonSection";
 import SectionTitle from "../../common/SectionTitle";
 import WindowTop from "../../common/WindowTop";
 import { CUTInfo } from "../../../utils/CUTInfo";
 import { getImagePath } from "../../../utils/imagePath";
 import PopupImage from "../../common/PopupImage";
+import { motion } from "motion/react";
+
+const kEY_FRAME = {
+  map: 0.1,
+  images: 0.3,
+};
 
 const AccessSection = () => {
   return (
@@ -22,10 +28,17 @@ const AccessSection = () => {
                 imgNum={n}
                 size="400px"
                 className={styles.imgWindow}
+                inViewVariant={sectionInView}
+                delay={kEY_FRAME.images + i * 0.1}
               />
             ))}
           </div>
-          <div className={styles.windowContainer}>
+          <motion.div
+            className={styles.windowContainer}
+            initial={{ opacity: 0, x: 100 }}
+            variants={{ [sectionInView]: { opacity: 1, x: 0 } }}
+            transition={{ delay: kEY_FRAME.map, duration: 0.5 }}
+          >
             <WindowTop />
             <div className={styles.window}>
               <iframe
@@ -47,7 +60,7 @@ const AccessSection = () => {
                 <p className={styles.callNumber}>{CUTInfo.phone}</p>
               </div>
             </div>
-          </div>
+          </motion.div>
           {/* <div className={styles.detailContainer}></div> */}
         </div>
       </CommonSection>
