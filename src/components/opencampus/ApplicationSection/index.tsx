@@ -12,9 +12,14 @@ import ApplicationUnit2 from "../ApplicationUnit2";
 const ApplicationSection = () => {
   return (
     <>
-      <CommonSection backgroundColor="section" id="application-section">
+      <CommonSection
+        backgroundColor="section"
+        insetShadow
+        id="application-section"
+      >
         <SectionTitle title="APPLICATION" subTitle="お申込み" />
-        <div className={styles.topContainer}>
+        <a className={styles.topContainer} href="#">
+          <div className={styles.topContainerBack}/>
           <div className={styles.topTextContainer}>
             <span className={styles.topText}>
               <p>お申込みは</p>
@@ -50,7 +55,7 @@ const ApplicationSection = () => {
               </div>
             </PentagonBox>
           </a> */}
-        </div>
+        </a>
         <div className={styles.applicationUnitsContainer}>
           {eventsData
             .filter((e) => {

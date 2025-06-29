@@ -38,6 +38,7 @@
   --shadow-bottom: 0px 3px 3px var(--bc-shadow);
   --shadow-center: 0px 0px 10px var(--bc-shadow);
   --shadow-big: 0 4px 20px var(--bc-shadow);
+  --shadow-big-hover: 0 4px 20px var(--bc-primary);
 
   --max-width: 1200px;
   --space-out: 50px; /* 外側のスペース */

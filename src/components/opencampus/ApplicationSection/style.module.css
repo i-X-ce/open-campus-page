@@ -2,7 +2,32 @@
   position: relative;
   display: flex;
   justify-content: space-between;
+  overflow: hidden;
   margin-top: var(--space-ll);
+  border-radius: var(--space-ss);
+  border: solid 1px var(--bc-grass);
+  box-shadow: var(--shadow-big);
+  transition: border 0.3s, box-shadow 0.3s;
+}
+
+.topContainer:hover {
+  border: solid 1px var(--bc-primary);
+  box-shadow: var(--shadow-big-hover);
+}
+
+.topContainerBack {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  background: var(--gra-primary);
+  clip-path: polygon(0 0, 100% 0, calc(100% - 300px) 100%, 0% 100%);
+  transition: width 0.3s;
+}
+
+.topContainer:hover .topContainerBack {
+  width: 120%;
 }
 
 .topTextContainer {
@@ -11,7 +36,6 @@
   flex-direction: column;
   gap: var(--space-ll);
   background: var(--gra-dark);
-  border-radius: var(--space-ss);
   padding: var(--space-ll);
   box-shadow: var(--shadow-big);
 }
@@ -32,11 +56,25 @@
   background-clip: text;
 }
 
+.topContainer:hover .topText p {
+  background: var(--gra-dark);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
 .topBorder {
+  position: relative;
   height: 2px;
   background: var(--gra-primary);
   width: 100%;
   border-radius: 1px;
+  z-index: 2;
+  transition: all 0.3s;
+}
+
+.topContainer:hover .topBorder {
+  background: var(--gra-dark);
 }
 
 .topPointersList {
@@ -52,6 +90,11 @@
   color: var(--bc-detail);
   line-height: 1.5;
   font-size: 0.95rem;
+  transition: color 0.3s;
+}
+
+.topContainer:hover .topPointersList li {
+  color: var(--bc-background);
 }
 
 .topPointersList li::before {
@@ -62,6 +105,11 @@
   color: var(--bc-primary);
   font-weight: bold;
   font-size: 1.1rem;
+  transition: color 0.3s;
+}
+
+.topContainer:hover .topPointersList li::before {
+  color: var(--bc-background);
 }
 
 .arrowRightContainer {
@@ -70,6 +118,12 @@
   font-size: 2rem;
   right: var(--space-ll);
   top: var(--space-ll);
+  transition: color 0.3s, right 0.3s;
+}
+
+.topContainer:hover .arrowRightContainer {
+  right: var(--space-l);
+  color: var(--bc-background);
 }
 
 .topApplyButton {
