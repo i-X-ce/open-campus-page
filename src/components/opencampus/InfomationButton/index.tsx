@@ -3,18 +3,28 @@ import styles from "./style.module.css";
 import PentagonBox from "../../common/PentagonBox";
 import TitleSet from "../../common/TitleSet";
 import { BsChevronDoubleRight } from "react-icons/bs";
+import { motion } from "motion/react";
+import { sectionInView } from "../../common/CommonSection";
 
 const InfomationButton = ({
   title,
   subTitle,
   imgNum = 1,
+  delay = 0,
 }: {
   title: string;
   subTitle: string;
   imgNum?: number;
+  delay?: number;
 }) => {
   return (
-    <a href="#" className={styles.container}>
+    <motion.a
+      href="#"
+      className={styles.container}
+      initial={{ opacity: 0, x: 50 }}
+      variants={{ [sectionInView]: { opacity: 1, x: 0 } }}
+      transition={{ delay }}
+    >
       <PentagonBox cutSize="50px">
         <div
           className={styles.content}
@@ -37,7 +47,7 @@ const InfomationButton = ({
           <div className={styles.moreBorder} />
         </div>
       </PentagonBox>
-    </a>
+    </motion.a>
   );
 };
 

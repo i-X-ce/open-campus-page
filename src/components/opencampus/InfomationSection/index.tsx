@@ -1,8 +1,32 @@
 import styles from "./style.module.css";
 
-import CommonSection from "../../common/CommonSection";
+import CommonSection, { sectionInView } from "../../common/CommonSection";
 import SectionTitle from "../../common/SectionTitle";
 import InfomationButton from "../InfomationButton";
+import { motion } from "motion/react";
+
+const ButtonData = [
+  {
+    title: "大学案内",
+    subTitle: "UNIVERSITY GUIDE",
+    imgNum: 10,
+  },
+  {
+    title: "学生生活",
+    subTitle: "STUDENT LIFE",
+    imgNum: 5,
+  },
+  {
+    title: "サークル紹介",
+    subTitle: "CIRCLE INTRODUCTION",
+    imgNum: 11,
+  },
+  {
+    title: "研究室紹介",
+    subTitle: "LABORATORY INTRODUCTION",
+    imgNum: 16,
+  },
+];
 
 const InfomationSection = () => {
   return (
@@ -10,25 +34,20 @@ const InfomationSection = () => {
       <CommonSection id="information-section">
         <SectionTitle title="INFORMATION" subTitle="大学情報" />
       </CommonSection>
-      <div className={styles.buttonsContainer}>
-        <InfomationButton
-          title="大学案内"
-          subTitle="UNIVERSITY GUIDE"
-          imgNum={10}
-        />
-        <InfomationButton title="学生生活" subTitle="STUDENT LIFE" imgNum={5} />
-        <InfomationButton
-          title="サークル紹介"
-          subTitle="CIRCLE INTRODUCTION"
-          imgNum={11}
-        />
-
-        <InfomationButton
-          title="研究室紹介"
-          subTitle="LABORATORY INTRODUCTION"
-          imgNum={16}
-        />
-      </div>
+      <motion.div
+        className={styles.buttonsContainer}
+        whileInView={sectionInView}
+      >
+        {ButtonData.map((button, i) => (
+          <InfomationButton
+            key={i}
+            title={button.title}
+            subTitle={button.subTitle}
+            imgNum={button.imgNum}
+            delay={0.1 * i}
+          />
+        ))}
+      </motion.div>
     </>
   );
 };
