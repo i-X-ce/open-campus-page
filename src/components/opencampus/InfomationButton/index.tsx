@@ -2,6 +2,7 @@ import styles from "./style.module.css";
 
 import PentagonBox from "../../common/PentagonBox";
 import TitleSet from "../../common/TitleSet";
+import { BsChevronDoubleRight } from "react-icons/bs";
 
 const InfomationButton = ({
   title,
@@ -26,6 +27,14 @@ const InfomationButton = ({
             titleSize="1.5rem"
             subTitleSize="1rem"
           />
+        </div>
+        <div className={styles.back} />
+        <div className={`${styles.more} big-s`}>
+          <p>
+            MORE
+            <BsChevronDoubleRight />
+          </p>
+          <div className={styles.moreBorder} />
         </div>
       </PentagonBox>
     </a>

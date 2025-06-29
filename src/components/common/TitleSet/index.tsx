@@ -6,8 +6,8 @@ const TitleSet = ({
   subTitle = "",
   titleSize = "2rem",
   subTitleSize = "1.5rem",
-  titleColor = "text",
-  subTitleColor = "text",
+  titleColor,
+  subTitleColor,
   className = "",
 }: {
   title?: string;
@@ -24,7 +24,7 @@ const TitleSet = ({
         className={`${styles.subTitle} big-s`}
         style={{
           fontSize: subTitleSize,
-          color: ct2css(subTitleColor),
+          ...(titleColor && { color: ct2css(titleColor) }),
         }}
       >
         {subTitle}
@@ -32,7 +32,7 @@ const TitleSet = ({
       <p
         style={{
           fontSize: titleSize,
-          color: ct2css(titleColor),
+          ...(subTitleColor && { color: ct2css(subTitleColor) }),
         }}
       >
         {title}
