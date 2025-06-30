@@ -16,21 +16,15 @@
   --bc-grass: rgba(255, 255, 255, 0.1);
   --bc-shadow: rgba(0, 0, 0, 0.2);
 
-  --gra-shadow: linear-gradient(
-    135deg,
-    rgba(255, 255, 255, 0.05) 0%,
-    rgba(255, 255, 255, 0.02) 100%
-  );
-  --gra-dark: linear-gradient(
-    135deg,
-    rgb(64, 64, 64) 0%,
-    var(--bc-background) 100%
-  );
-  --gra-section: linear-gradient(
-    135deg,
-    var(--bc-shadow) 0%,
-    var(--bc-section) 100%
-  );
+  --gra-shadow: linear-gradient(135deg,
+      rgba(255, 255, 255, 0.05) 0%,
+      rgba(255, 255, 255, 0.02) 100%);
+  --gra-dark: linear-gradient(135deg,
+      rgb(64, 64, 64) 0%,
+      var(--bc-background) 100%);
+  --gra-section: linear-gradient(135deg,
+      var(--bc-shadow) 0%,
+      var(--bc-section) 100%);
   --gra-primary: linear-gradient(135deg, var(--bc-primary) 0%, #4a90e2 100%);
   --gra-grass: linear-gradient(135deg, transparent 0%, var(--bc-grass) 100%);
 
@@ -41,7 +35,8 @@
   --shadow-big-hover: 0 4px 20px var(--bc-primary);
 
   --max-width: 1200px;
-  --space-out: 50px; /* 外側のスペース */
+  --space-out: 50px;
+  /* 外側のスペース */
 
   --space-ss: 5px;
   --space-s: 10px;
@@ -92,3 +87,15 @@ a {
   font-weight: 400;
   font-style: normal;
 }
+
+@media (max-width:1440px) {}
+
+@media (max-width:1080px) {}
+
+@media (max-width:900px) {}
+
+@media (max-width:864px) {}
+
+@media (max-width:768px) {}
+
+@media (max-width:720px) {}
