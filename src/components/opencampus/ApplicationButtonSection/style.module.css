@@ -54,7 +54,6 @@
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
-  transition: background 0.3s;
 }
 
 .button:hover .textContainer p {
@@ -67,4 +66,14 @@
 .accent {
   position: absolute;
   display: none;
+}
+
+@media (max-width: 720px) {
+  .button {
+    font-size: 1.5rem;
+  }
+
+  .textContainer {
+    gap: var(--space-m);
+  }
 }
