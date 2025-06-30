@@ -23,9 +23,11 @@ function ProgramCardWrapper({
   index: number;
   delay: number;
 }) {
-  const border = (
+  const ProgramBorder = ({ is2 = false }: { is2?: boolean }) => (
     <motion.div
-      className={styles.programBorder}
+      className={`${styles.programBorder} ${
+        is2 ? styles.programBorderSmall : ""
+      }`}
       initial={{ height: 0 }}
       variants={{ [sectionInView]: { height: "100%" } }}
       transition={{ delay, duration: DURATION, ease: "linear" }}
@@ -36,15 +38,16 @@ function ProgramCardWrapper({
     <>
       {index % 2 === 0 && (
         <>
-          <div />
-          {border}
+          <div className={styles.null} />
+          {<ProgramBorder />}
         </>
       )}
       {children}
+      {<ProgramBorder is2 />}
       {index % 2 === 1 && (
         <>
-          {border}
-          <div />
+          {<ProgramBorder />}
+          <div className={styles.null} />
         </>
       )}
     </>
@@ -54,7 +57,7 @@ function ProgramCardWrapper({
 function BorderPoint({ delay }: { delay: number }) {
   return (
     <>
-      <div />
+      <div className={styles.null} />
       <motion.div
         className={styles.borderPoint}
         initial={{ opacity: 0 }}

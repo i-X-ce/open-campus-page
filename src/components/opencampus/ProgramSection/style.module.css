@@ -18,3 +18,25 @@
   width: 1px;
   background-color: var(--bc-border);
 }
+
+.null {
+  display: block;
+}
+
+.programBorderSmall {
+  display: none;
+}
+
+@media (max-width: 1080px) {
+  .cardsContainer {
+    grid-template-columns: 1px 1fr;
+  }
+
+  .null {
+    display: none;
+  }
+
+  .programBorderSmall {
+    display: block;
+  }
+}
