@@ -17,14 +17,14 @@ const SectionTitle = ({
             i === 1 ? styles.titleContainer1 : ""
           }`}
           key={i}
-          initial={i === 0 ? { opacity: 0 } : { width: 0, paddingRight: 0 }}
+          initial={i === 0 ? { opacity: 0 } : { opacity: 0, width: 0 }}
           variants={{
             [sectionInView]:
               i === 0
                 ? { opacity: 1, transition: { duration: 0.5 } }
                 : {
                     width: "auto",
-                    paddingRight: 100,
+                    opacity: 1,
                     transition: { duration: 0.5, delay: 0.7 },
                   },
           }}

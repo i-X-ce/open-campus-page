@@ -30,7 +30,7 @@
   bottom: 0;
   left: 0;
   overflow: hidden;
-  background-color: var(--bc-primary);
+  background: var(--gra-primary);
   height: 1rem;
   z-index: 2;
   color: var(--bc-background);
@@ -42,4 +42,22 @@
 
 .title {
   font-size: 5rem;
+}
+
+@media (max-width: 480px) {
+  .titleContainer {
+    padding-right: var(--space-m);
+  }
+
+  .titleContainer1 {
+    height: 0.5rem;
+  }
+
+  .subTitle {
+    font-size: 1rem;
+  }
+
+  .title {
+    font-size: 3rem;
+  }
 }
