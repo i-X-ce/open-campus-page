@@ -21,6 +21,7 @@
   font-size: 10rem;
   line-height: 1;
   gap: var(--space-m);
+  z-index: 2;
 }
 
 .date {
@@ -90,4 +91,34 @@
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+}
+
+@media (max-width: 864px) {
+  .imgWrapper {
+    position: absolute;
+    right: 0;
+  }
+}
+
+@media (max-width: 720px) {
+  .section {
+    min-height: 600px;
+  }
+
+  .textContainer {
+    font-size: 6rem;
+    gap: var(--space-s);
+  }
+
+  .date {
+    font-size: 3rem;
+  }
+
+  .day {
+    font-size: 4rem;
+  }
+
+  .leftLine {
+    width: var(--space-m);
+  }
 }
