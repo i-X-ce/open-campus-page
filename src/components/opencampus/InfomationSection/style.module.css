@@ -4,3 +4,16 @@
   padding: var(--space-m);
   margin: var(--space-ll) 0;
 }
+
+@media (max-width: 1440px) {
+  .buttonsContainer {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .buttonsContainer {
+    grid-template-columns: 1fr;
+  }
+}

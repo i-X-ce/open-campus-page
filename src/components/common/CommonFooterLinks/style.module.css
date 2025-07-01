@@ -1,6 +1,17 @@
 .container {
   margin-bottom: 30px;
 }
+.titleButton {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.downButton {
+  display: none;
+}
+
 .title {
   font-size: 1.2rem;
 }
@@ -52,4 +63,27 @@
   height: 1px;
   background-color: var(--bc-border);
   align-self: flex-end;
+}
+
+.linkWrapper {
+}
+
+.linkWrapperSmall {
+  display: none;
+}
+
+@media (max-width: 900px) {
+  .titleButton {
+    border-bottom: solid 1px var(--bc-border);
+  }
+  .downButton {
+    display: block;
+  }
+
+  .linkWrapper {
+    display: none;
+  }
+  .linkWrapperSmall {
+    display: block;
+  }
 }

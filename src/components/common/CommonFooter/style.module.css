@@ -48,11 +48,33 @@
   font-size: 1.2rem;
   gap: var(--space-s);
 }
+
 .bottomContainerLeft {
   display: flex;
   flex-direction: column;
   gap: var(--space-m);
 }
+
 .bottmContainerRight {
   align-self: flex-end;
+}
+
+@media (max-width: 1080px) {
+  .navs {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 900px) {
+  .navs {
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-m);
+  }
+}
+
+@media (max-width: 768px) {
+  .navs {
+    grid-template-columns: 1fr;
+    gap: var(--space-s);
+  }
 }
