@@ -13,6 +13,7 @@
   gap: var(--space-ll);
   max-width: 1600px;
   margin: var(--space-ll) 0;
+  overflow-x: hidden;
 }
 
 .containerBackWrapper {

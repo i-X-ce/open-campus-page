@@ -28,7 +28,7 @@ const CommonSection = ({
       }}
       id={id}
       whileInView={sectionInView}
-      viewport={{ once: true, amount: 0.5 }}
+      viewport={{ once: true, amount: 0.3 }}
     >
       <div className={styles.container}>{children}</div>
     </motion.section>

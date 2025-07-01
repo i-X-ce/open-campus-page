@@ -30,10 +30,8 @@ const ButtonData = [
 
 const InfomationSection = () => {
   return (
-    <>
-      <CommonSection id="information-section">
-        <SectionTitle title="INFORMATION" subTitle="大学情報" />
-      </CommonSection>
+    <CommonSection id="information-section">
+      <SectionTitle title="INFORMATION" subTitle="大学情報" />
       <motion.div
         className={styles.buttonsContainer}
         whileInView={sectionInView}
@@ -48,7 +46,7 @@ const InfomationSection = () => {
           />
         ))}
       </motion.div>
-    </>
+    </CommonSection>
   );
 };
 

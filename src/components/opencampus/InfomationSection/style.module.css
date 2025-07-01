@@ -1,7 +1,7 @@
 .buttonsContainer {
   display: flex;
   gap: var(--space-m);
-  padding: var(--space-m);
+  /* padding: var(--space-m); */
   margin: var(--space-ll) 0;
 }
 

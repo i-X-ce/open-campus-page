@@ -84,3 +84,9 @@
 .container:hover .moreBorder {
   right: 0;
 }
+
+@media (max-width: 1440px) {
+  .content {
+    padding-bottom: 100px;
+  }
+}
