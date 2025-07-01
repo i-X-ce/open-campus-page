@@ -58,12 +58,14 @@ const AboutSection = () => {
               のプログラマー」
             </p>
           </motion.div>
-          <motion.div
-            className={styles.textBorder}
-            initial={{ width: 0 }}
-            variants={{ [sectionInView]: { width: "100vw" } }}
-            transition={{ duration: 1, delay: kEY_FRAME.border }}
-          />
+          <div className={styles.textBorderWrapper}>
+            <motion.div
+              className={styles.textBorder}
+              initial={{ width: 0 }}
+              variants={{ [sectionInView]: { width: "100vw" } }}
+              transition={{ duration: 1, delay: kEY_FRAME.border }}
+            />
+          </div>
           <motion.div
             className={styles.description}
             initial={{ opacity: 0, y: 50 }}
