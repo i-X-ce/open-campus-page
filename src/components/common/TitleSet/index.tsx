@@ -9,6 +9,7 @@ const TitleSet = ({
   titleColor,
   subTitleColor,
   className = "",
+  breakpoint = [],
 }: {
   title?: string;
   subTitle?: string;
@@ -17,9 +18,28 @@ const TitleSet = ({
   titleColor?: ColorType;
   subTitleColor?: ColorType;
   className?: string;
+  breakpoint?: {
+    width: number;
+    titleSize?: string;
+    subTitleSize?: string;
+  }[];
 }) => {
   return (
     <div className={`${styles.container} ${className}`}>
+      <style>
+        {breakpoint.map(
+          (bp) => `
+          @media (max-width: ${bp.width}px) {
+            .${styles.subTitle} {
+              font-size: ${bp.subTitleSize || subTitleSize} !important;
+            }
+            .${styles.title} {
+              font-size: ${bp.titleSize || titleSize} !important;
+            }
+          }
+        `
+        )}
+      </style>
       <p
         className={`${styles.subTitle} big-s`}
         style={{
@@ -34,6 +54,7 @@ const TitleSet = ({
           fontSize: titleSize,
           ...(titleColor && { color: ct2css(titleColor) }),
         }}
+        className={styles.title}
       >
         {title}
       </p>

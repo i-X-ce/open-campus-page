@@ -87,6 +87,11 @@ const DetailUnit = ({
               titleColor="background"
               subTitleColor="background"
               className={styles.eventTitleSet}
+              breakpoint={[
+                { width: 864, titleSize: "1.5rem", subTitleSize: "1.2rem" },
+                { width: 640, titleSize: "1.3rem", subTitleSize: "1.1rem" },
+                { width: 480, titleSize: "1.2rem", subTitleSize: "1rem" },
+              ]}
             />
             <div className={styles.bigEventDescription}>{description}</div>
           </motion.div>
@@ -128,6 +133,24 @@ const DetailUnit = ({
                           className={styles.eventTitle}
                           titleSize="1.5rem"
                           subTitleSize="1rem"
+                          subTitleColor="detail"
+                          breakpoint={[
+                            {
+                              width: 864,
+                              titleSize: "1.3rem",
+                              subTitleSize: "0.9rem",
+                            },
+                            {
+                              width: 640,
+                              titleSize: "1.2rem",
+                              subTitleSize: "0.8rem",
+                            },
+                            {
+                              width: 480,
+                              titleSize: "1.1rem",
+                              subTitleSize: "0.7rem",
+                            },
+                          ]}
                         />
                       </motion.span>
                       {/* <p className={styles.eventTitle}>{event.title}</p> */}

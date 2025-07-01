@@ -44,9 +44,7 @@
   justify-content: center;
   max-width: 30%;
   z-index: 10;
-  /* padding: var(--space-s); */
-  /* backdrop-filter: blur(5px) brightness(0.8); */
-  /* border: solid 1px var(--bc-grass); */
+
   border-radius: var(--space-ss);
 }
 
@@ -59,7 +57,7 @@
 .windowContainer {
   min-width: 650px;
   max-width: 55%;
-  min-height: 500px;
+  /* min-height: 500px; */
   background: var(--gra-section);
   position: relative;
   box-shadow: var(--shadow-regular);
@@ -201,4 +199,117 @@
   bottom: 0;
   background-color: var(--bc-primary);
   z-index: 2;
+}
+
+@media (max-width: 1440px) {
+  .numContainer {
+    padding: var(--space-s);
+    backdrop-filter: blur(5px) brightness(0.8);
+    border: solid 1px var(--bc-grass);
+    box-shadow: var(--shadow-big);
+  }
+
+  .eventsContainer {
+    --time-width: 100px;
+  }
+
+  .eventTime {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 1080px) {
+  .container {
+    flex-direction: column !important;
+    align-items: stretch;
+    gap: var(--space-m);
+    padding: var(--space-l);
+  }
+
+  .numContainer {
+    flex-direction: row;
+    max-width: none;
+    gap: var(--space-m);
+    padding: var(--space-m);
+  }
+
+  .num {
+    font-size: 5rem;
+  }
+
+  .windowContainer {
+    max-width: none;
+    min-width: 0;
+  }
+}
+
+@media (max-width: 720px) {
+  .container {
+    padding: var(--space-m);
+  }
+
+  .eventTime {
+    display: none;
+  }
+
+  .timeBg {
+    display: none;
+  }
+
+  .eventsContainer {
+    display: flex;
+    flex-direction: column;
+    padding-left: var(--space-m);
+  }
+}
+
+@media (max-width: 480px) {
+  .numContainer {
+    flex-direction: column;
+    align-items: center;
+    max-width: 100%;
+    padding: var(--space-ss);
+
+    backdrop-filter: none;
+    border: none;
+    box-shadow: none;
+  }
+
+  .num {
+    font-size: 10rem;
+  }
+
+  .bigEventDescription {
+    padding: var(--space-ss);
+    font-size: 1rem;
+  }
+
+  .windowContainer {
+    min-width: 0;
+    width: 100%;
+  }
+
+  .imgContainerL,
+  .imgContainerR {
+    display: none;
+  }
+
+  .eventsContainer {
+    padding: var(--space-l) var(--space-s) var(--space-ll);
+  }
+
+  .eventTitleWrapper {
+    flex-direction: column-reverse;
+    align-items: start;
+    padding: 0;
+  }
+
+  .eventDetailContainer {
+    padding-left: var(--space-s);
+  }
+
+  .applyTag {
+    margin: 0;
+    align-self: flex-end;
+  }
 }
