@@ -20,7 +20,7 @@ const AccessSection = () => {
         <span style={{ position: "relative", zIndex: 2 }}>
           <SectionTitle title="ACCESS" subTitle="アクセス" />
         </span>
-        <div className={styles.cotnainer}>
+        <div className={styles.container}>
           <div className={styles.imgWindowsContainer}>
             {[17, 18, 19, 20].map((n, i) => (
               <PopupImage
