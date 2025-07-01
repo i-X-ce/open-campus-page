@@ -68,3 +68,27 @@
 .eventButton:hover .subEventTitle {
   color: var(--bc-background);
 }
+
+@media (max-width: 768px) {
+  .textContainer {
+    padding: var(--space-m);
+  }
+
+  .eventButtonText {
+    padding: var(--space-s) var(--space-l);
+  }
+
+  .subEventContainer {
+    gap: var(--space-s);
+  }
+}
+
+@media (max-width: 480px) {
+  .eventButtonText {
+    padding: var(--space-s);
+  }
+
+  .subEventTitle {
+    font-size: 1rem;
+  }
+}

@@ -1,5 +1,6 @@
 import { ct2css, type ColorType } from "../../../utils/colorType";
 import styles from "./style.module.css";
+import { useEffect, useRef, useState } from "react";
 
 const TitleSet = ({
   title = "",
@@ -24,24 +25,50 @@ const TitleSet = ({
     subTitleSize?: string;
   }[];
 }) => {
-  return (
-    <div className={`${styles.container} ${className}`}>
-      <style>
-        {breakpoint.map(
-          (bp) => `
-          @media (max-width: ${bp.width}px) {
-            .${styles.subTitle} {
-              font-size: ${bp.subTitleSize || subTitleSize} !important;
-            }
-            .${styles.title} {
-              font-size: ${bp.titleSize || titleSize} !important;
-            }
+  const containerRef = useRef<HTMLDivElement>(null);
+  const [uniqueId] = useState(
+    () => `titleset-${Math.random().toString(36).substr(2, 9)}`
+  );
+
+  useEffect(() => {
+    if (breakpoint.length === 0) return;
+
+    // スコープ付きのスタイルを生成
+    const mediaQueries = breakpoint
+      .map(
+        (bp) => `
+        @media (max-width: ${bp.width}px) {
+          .${uniqueId} .title-element {
+            font-size: ${bp.titleSize || titleSize} !important;
           }
-        `
-        )}
-      </style>
+          .${uniqueId} .subtitle-element {
+            font-size: ${bp.subTitleSize || subTitleSize} !important;
+          }
+        }
+      `
+      )
+      .join("");
+
+    // スタイル要素を作成して追加
+    const styleElement = document.createElement("style");
+    styleElement.textContent = mediaQueries;
+    document.head.appendChild(styleElement);
+
+    // クリーンアップ関数
+    return () => {
+      if (styleElement.parentNode) {
+        styleElement.parentNode.removeChild(styleElement);
+      }
+    };
+  }, [breakpoint, titleSize, subTitleSize, uniqueId]);
+
+  return (
+    <div
+      ref={containerRef}
+      className={`${styles.container} ${className} ${uniqueId}`}
+    >
       <p
-        className={`${styles.subTitle} big-s`}
+        className={`${styles.subTitle} big-s subtitle-element`}
         style={{
           fontSize: subTitleSize,
           ...(subTitleColor && { color: ct2css(subTitleColor) }),
@@ -54,7 +81,7 @@ const TitleSet = ({
           fontSize: titleSize,
           ...(titleColor && { color: ct2css(titleColor) }),
         }}
-        className={styles.title}
+        className={`${styles.title} title-element`}
       >
         {title}
       </p>

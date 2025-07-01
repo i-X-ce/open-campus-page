@@ -161,3 +161,49 @@
   gap: var(--space-m);
   margin-top: var(--space-m);
 }
+
+@media (max-width: 1080px) {
+  .applicationUnitsContainer {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 900px) {
+  .topContainerBack {
+    clip-path: polygon(0 0, 100% 0, calc(100% - 200px) 100%, 0% 100%);
+  }
+}
+
+@media (max-width: 768px) {
+  .topText p {
+    font-size: 2.5rem;
+  }
+
+  .topTextContainer {
+    padding: var(--space-m);
+    gap: var(--space-m);
+  }
+
+  .topContainerBack {
+    clip-path: polygon(0 0, 100% 0, calc(100% - 100px) 100%, 0% 100%);
+  }
+
+  .topApplyButtonText p {
+    font-size: 1.5rem;
+  }
+
+  .arrowRightContainer {
+    font-size: 1.5rem;
+    right: var(--space-m);
+  }
+
+  .topPointersList li {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .topText p {
+    font-size: 2rem;
+  }
+}
