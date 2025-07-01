@@ -77,4 +77,18 @@
     grid-template-columns: 1fr;
     gap: var(--space-s);
   }
+
+  .container {
+    padding: var(--space-s);
+    gap: var(--space-l);
+    font-size: 0.8rem;
+  }
+
+  .bottomContainerLeft {
+    align-self: flex-start;
+  }
+
+  .bottomContainer {
+    flex-direction: column;
+  }
 }
