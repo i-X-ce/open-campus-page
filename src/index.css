@@ -52,6 +52,10 @@
   --space-lll: 100px;
 }
 
+html {
+  overflow-x: hidden;
+}
+
 body {
   background-color: var(--bc-background);
   color: var(--bc-text);
