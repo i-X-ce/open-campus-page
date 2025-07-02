@@ -9,3 +9,15 @@
   margin: 0 auto;
   padding: 0 var(--space-out);
 }
+
+@media (max-width: 900px) {
+  .section {
+    padding: var(--space-l) 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .section {
+    padding: var(--space-m) 0;
+  }
+}

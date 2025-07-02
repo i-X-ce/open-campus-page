@@ -204,9 +204,6 @@
 @media (max-width: 1440px) {
   .numContainer {
     padding: var(--space-s);
-    backdrop-filter: blur(5px) brightness(0.8);
-    border: solid 1px var(--bc-grass);
-    box-shadow: var(--shadow-big);
   }
 
   .eventsContainer {
@@ -231,6 +228,10 @@
     max-width: none;
     gap: var(--space-m);
     padding: var(--space-m);
+
+    backdrop-filter: blur(5px) brightness(0.5);
+    border: solid 1px var(--bc-grass);
+    box-shadow: var(--shadow-big);
   }
 
   .num {
