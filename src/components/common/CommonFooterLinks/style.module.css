@@ -44,7 +44,14 @@
   background-color: var(--bc-border);
 }
 .linkA {
+  flex: 1;
   padding-left: 0.5rem;
+  transition: background-color 0.3s;
+}
+
+.linkA:hover {
+  color: var(--bc-text);
+  background-color: var(--bc-border);
 }
 .linkEnd {
   display: flex;
@@ -65,25 +72,33 @@
   align-self: flex-end;
 }
 
-.linkWrapper {
+.smallBlock {
+  display: none;
 }
 
-.linkWrapperSmall {
+.smallFlex {
   display: none;
 }
 
 @media (max-width: 900px) {
   .titleButton {
     border-bottom: solid 1px var(--bc-border);
+    padding: 0 var(--space-s);
   }
   .downButton {
     display: block;
+    font-size: 1.2rem;
   }
 
-  .linkWrapper {
+  .big {
     display: none;
   }
-  .linkWrapperSmall {
+
+  .smallBlock {
     display: block;
+  }
+
+  .smallFlex {
+    display: flex;
   }
 }
