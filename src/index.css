@@ -52,17 +52,12 @@
   --space-lll: 100px;
 }
 
-html {
-  overflow-x: hidden;
-}
-
 body {
   background-color: var(--bc-background);
   color: var(--bc-text);
   font-family: "Zen Kaku Gothic New", sans-serif;
   font-weight: 400;
   font-style: normal;
-  overflow-x: hidden;
 }
 
 button {

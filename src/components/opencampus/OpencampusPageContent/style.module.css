@@ -1,0 +1,10 @@
+.cotnainer {
+  margin-top: var(--space-ll);
+  overflow-x: hidden;
+}
+
+@media (max-width: 900px) {
+  .cotnainer {
+    margin-top: 0;
+  }
+}

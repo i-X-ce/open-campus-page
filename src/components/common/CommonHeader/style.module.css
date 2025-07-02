@@ -2,6 +2,7 @@
   position: sticky;
   top: 0;
   z-index: 1000;
+  /* width: 100%; */
   background-color: var(--bc-section);
   border-bottom: solid 1px var(--bc-grass);
   box-shadow: var(--shadow-regular);
@@ -62,6 +63,12 @@ header ul {
   display: none;
 }
 
+.iconWrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 @media (max-width: 1080px) {
   .navList {
     gap: var(--space-ss);
@@ -77,6 +84,7 @@ header ul {
     top: 0;
     bottom: 0;
     right: 0;
+    width: auto;
   }
 
   .container {

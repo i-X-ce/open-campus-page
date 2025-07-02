@@ -1,4 +1,4 @@
-// import styles from "./style.module.css";
+import styles from "./style.module.css";
 
 import AboutSection from "../AboutSection";
 import AccessSection from "../AccessSection";
@@ -11,7 +11,7 @@ import HeloSection from "../HeloSection";
 
 const OpencampusPageContent = () => {
   return (
-    <div>
+    <div className={styles.cotnainer}>
       <HeloSection />
       <ApplicationButtonSection />
       <ProgramSection />
