@@ -2,9 +2,6 @@ import styles from "./style.module.css";
 
 import CommonSection from "../../common/CommonSection";
 import SectionTitle from "../../common/SectionTitle";
-import PentagonBox from "../../common/PentagonBox";
-import { VscChevronRight } from "react-icons/vsc";
-import ApplicationUnit from "../ApplicationUnit";
 import { eventsData } from "../../../utils/event";
 import { IoIosArrowDropright } from "react-icons/io";
 import ApplicationUnit2 from "../ApplicationUnit2";

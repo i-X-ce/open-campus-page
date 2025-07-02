@@ -1,5 +1,4 @@
 import styles from "./style.module.css";
-import WindowTop from "../../common/WindowTop";
 
 const HeloSection = () => {
   return (

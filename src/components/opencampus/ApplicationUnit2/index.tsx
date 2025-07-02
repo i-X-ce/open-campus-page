@@ -8,8 +8,6 @@ import { motion, type MotionNodeOptions } from "motion/react";
 
 const ApplicationUnit2 = ({
   bigEventData,
-  inViewVariant,
-  delay = 0,
   motionData,
 }: {
   bigEventData: BigEventType;
@@ -17,7 +15,7 @@ const ApplicationUnit2 = ({
   delay?: number;
   motionData?: MotionNodeOptions;
 }) => {
-  const { title, subTitle, description } = bigEventData.eventData;
+  const { title, description } = bigEventData.eventData;
   return (
     <motion.div className={styles.container} {...motionData}>
       <div className={styles.textContainer}>

@@ -1,7 +1,6 @@
 import { VscChevronRight } from "react-icons/vsc";
 import styles from "./style.module.css";
 import TitleSet from "../../common/TitleSet";
-import { ct2css } from "../../../utils/colorType";
 import { motion } from "motion/react";
 import { sectionInView } from "../../common/CommonSection";
 
