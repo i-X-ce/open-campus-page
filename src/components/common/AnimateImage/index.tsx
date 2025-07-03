@@ -9,17 +9,20 @@ const DIRECTION_X = ["left", "right"] as const;
 
 const AnimateImage = ({
   imgNumber,
-  delay,
-  gridArea,
+  delay = 0,
+  gridArea = `i${imgNumber}`,
+  delyaRange = 1.0,
+  
 }: {
   imgNumber: number;
-  delay: number;
+  delay?: number;
   gridArea?: string;
+  delyaRange?: number;
 }) => {
   const directionY = DIRECTION_Y[Math.floor(Math.random() * 2)];
   const diractionX = DIRECTION_X[Math.floor(Math.random() * 2)];
   const direction = Math.random() < 0.5 ? "width" : "height";
-  const commonDelay = delay + Math.random() * 1;
+  const commonDelay = delay + Math.random() * delyaRange;
 
   const animateProps = (d: number) => {
     return {

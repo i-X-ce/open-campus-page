@@ -7,15 +7,20 @@ import { CUTInfo } from "../../../utils/CUTInfo";
 import { getImagePath } from "../../../utils/imagePath";
 import PopupImage from "../../common/PopupImage";
 import { motion } from "motion/react";
+import AnimateImage from "../../common/AnimateImage";
 
 const kEY_FRAME = {
-  map: 0.1,
-  images: 0.3,
+  map: 1.2,
+  images: 1.5,
 };
 
 const AccessSection = () => {
   return (
-    <section className={styles.section}>
+    <motion.section
+      className={styles.section}
+      whileInView={sectionInView}
+      viewport={{ once: true, amount: 0.5 }}
+    >
       <CommonSection id="access-section">
         <span style={{ position: "relative", zIndex: 2 }}>
           <SectionTitle title="ACCESS" subTitle="アクセス" />
@@ -66,16 +71,17 @@ const AccessSection = () => {
       </CommonSection>
       <div className={styles.imgBox}>
         {[17, 18, 19, 20, 21].map((n, i) => (
-          <div
-            className={styles.img}
-            style={{
-              gridArea: `i${i + 1}`,
-              backgroundImage: getImagePath(n),
-            }}
-          />
+          // <div
+          //   className={styles.img}
+          //   style={{
+          //     gridArea: `i${i + 1}`,
+          //     backgroundImage: getImagePath(n),
+          //   }}
+          // />
+          <AnimateImage key={i} imgNumber={n} gridArea={`i${i + 1}`} />
         ))}
       </div>
-    </section>
+    </motion.section>
   );
 };
 

@@ -4,6 +4,7 @@ import CommonSection, { sectionInView } from "../../common/CommonSection";
 import SectionTitle from "../../common/SectionTitle";
 import AboutButton2 from "../AboutButton2";
 import { motion } from "motion/react";
+import AnimateImage from "../../common/AnimateImage";
 
 const ButtonData = [
   {
@@ -32,7 +33,7 @@ const kEY_FRAME = {
 
 const AboutSection = () => {
   return (
-    <CommonSection id="about-section">
+    <CommonSection id="about-section" amount={0.2}>
       <SectionTitle title="ABOUT" subTitle="大学紹介" />
       <div className={styles.container}>
         <div className={styles.textContainer}>
@@ -94,13 +95,20 @@ const AboutSection = () => {
         <div className={styles.imgContainer}>
           <div className={styles.imgContent}>
             {[1, 4, 8, 13].map((n, i) => (
-              <div
+              // <div
+              //   key={i}
+              //   style={{
+              //     backgroundImage: `url("/images/image (${n}).jpeg")`,
+              //     gridArea: `i${i + 1}`,
+              //   }}
+              //   className={styles.img}
+              // />
+              <AnimateImage
                 key={i}
-                style={{
-                  backgroundImage: `url("/images/image (${n}).jpeg")`,
-                  gridArea: `i${i + 1}`,
-                }}
-                className={styles.img}
+                imgNumber={n}
+                gridArea={`i${i + 1}`}
+                delay={1}
+                delyaRange={0.5}
               />
             ))}
           </div>

@@ -12,12 +12,14 @@ const CommonSection = ({
   className = "",
   id = "",
   insetShadow = false,
+  amount = 0.3,
 }: {
   children?: ReactNode;
   backgroundColor?: ColorType;
   className?: string;
   id?: string;
   insetShadow?: boolean;
+  amount?: number;
 }) => {
   return (
     <motion.section
@@ -28,7 +30,7 @@ const CommonSection = ({
       }}
       id={id}
       whileInView={sectionInView}
-      viewport={{ once: true, amount: 0.3 }}
+      viewport={{ once: true, amount }}
     >
       <div className={styles.container}>{children}</div>
     </motion.section>

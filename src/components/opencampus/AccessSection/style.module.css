@@ -81,6 +81,7 @@
     "i4 i3 i1"
     "i5 i3 i1"
     "i2 i2 i1";
+  filter: blur(2px) opacity(0.5) brightness(0.8);
 }
 
 .detailBorderContainer {
@@ -106,7 +107,6 @@
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  filter: blur(2px) opacity(0.5) brightness(0.8);
 }
 
 .windowTextBoxInfoContainer {
