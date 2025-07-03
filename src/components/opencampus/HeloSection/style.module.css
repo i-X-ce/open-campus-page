@@ -33,20 +33,49 @@
 }
 
 .day {
+  position: relative;
   font-size: 7rem;
   color: var(--bc-background);
+  background: var(--gra-primary);
+}
+
+.dayBack {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
   background-color: var(--bc-primary);
+}
+
+.lineWrapper1,
+.lineWrapper2 {
+  position: relative;
+  align-self: stretch;
+}
+
+.lineWrapper1 {
+  width: var(--space-l);
+}
+
+.lineWrapper2 {
+  width: var(--space-s);
 }
 
 .leftLine,
 .leftLine2 {
-  width: var(--space-ll);
+  position: absolute;
+  width: 100%;
+  height: 100%;
   background-color: var(--bc-primary);
-  align-self: stretch;
+}
+
+.leftLine {
+  right: 0;
 }
 
 .leftLine2 {
-  width: var(--space-s);
+  bottom: 0;
 }
 
 .windowContainer {
@@ -54,6 +83,7 @@
   min-height: 500px;
   background: var(--bc-section);
 }
+
 .imgWrapper {
   position: relative;
   flex: 1;
