@@ -132,4 +132,7 @@ a {
 }
 
 @media (max-width: 480px) {
+  :root {
+    --space-out: 5px;
+  }
 }
