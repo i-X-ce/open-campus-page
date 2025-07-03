@@ -30,23 +30,22 @@ const ButtonData = [
 
 const InfomationSection = () => {
   return (
-    <CommonSection id="information-section" grid>
-      <SectionTitle title="INFORMATION" subTitle="大学情報" />
-      <motion.div
-        className={styles.buttonsContainer}
-        whileInView={sectionInView}
-      >
-        {ButtonData.map((button, i) => (
-          <InfomationButton
-            key={i}
-            title={button.title}
-            subTitle={button.subTitle}
-            imgNum={button.imgNum}
-            delay={0.1 * i}
-          />
-        ))}
-      </motion.div>
-    </CommonSection>
+    <>
+      <CommonSection id="information-section" grid>
+        <SectionTitle title="INFORMATION" subTitle="大学情報" />
+        <motion.div className={styles.buttonsContainer}>
+          {ButtonData.map((button, i) => (
+            <InfomationButton
+              key={i}
+              title={button.title}
+              subTitle={button.subTitle}
+              imgNum={button.imgNum}
+              delay={0.1 * i}
+            />
+          ))}
+        </motion.div>
+      </CommonSection>
+    </>
   );
 };
 

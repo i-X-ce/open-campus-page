@@ -20,7 +20,7 @@ const AccessSection = () => {
       whileInView={sectionInView}
       viewport={{ once: true, amount: 0.5 }}
     >
-      <CommonSection id="access-section" grid>
+      <CommonSection id="access-section">
         <span style={{ position: "relative", zIndex: 2 }}>
           <SectionTitle title="ACCESS" subTitle="アクセス" />
         </span>

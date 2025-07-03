@@ -6,7 +6,7 @@ import AnimateImage from "../../common/AnimateImage";
 const kEY_FRAME = {
   line: 0.3,
   text: 0.5,
-  img: 1,
+  img: 2,
 };
 
 const HeloSection = () => {
