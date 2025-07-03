@@ -25,6 +25,7 @@ const ApplicationSection = () => {
       insetShadow
       id="application-section"
       className={styles.section}
+      grid
     >
       <SectionTitle title="APPLICATION" subTitle="お申込み" />
       <motion.a className={styles.topContainer} href="#" {...ANIMATION_DATA(0)}>

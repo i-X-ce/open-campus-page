@@ -1,8 +1,10 @@
+
 .section {
   position: relative;
   min-height: 800px;
   display: flex;
   overflow: hidden;
+  background-image: var(--grid-image);
 }
 
 .container {

@@ -30,7 +30,7 @@ const ButtonData = [
 
 const InfomationSection = () => {
   return (
-    <CommonSection id="information-section">
+    <CommonSection id="information-section" grid>
       <SectionTitle title="INFORMATION" subTitle="大学情報" />
       <motion.div
         className={styles.buttonsContainer}

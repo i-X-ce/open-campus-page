@@ -40,6 +40,23 @@
   --shadow-big: 0 4px 20px var(--bc-shadow);
   --shadow-big-hover: 0 4px 20px var(--bc-primary);
 
+  --grid-rotate: 5deg;
+  --grid-gap: 100px;
+  --grid-image: repeating-linear-gradient(
+      calc(0deg + var(--grid-rotate)),
+      var(--bc-border) 0px,
+      var(--bc-border) 1px,
+      transparent 1px,
+      transparent var(--grid-gap)
+    ),
+    repeating-linear-gradient(
+      calc(90deg + var(--grid-rotate)),
+      var(--bc-border) 0px,
+      var(--bc-border) 1px,
+      transparent 1px,
+      transparent var(--grid-gap)
+    );
+
   --max-width: 1200px;
   --space-out: 50px;
   /* 外側のスペース */

@@ -4,7 +4,6 @@ import CommonSection, { sectionInView } from "../../common/CommonSection";
 import SectionTitle from "../../common/SectionTitle";
 import WindowTop from "../../common/WindowTop";
 import { CUTInfo } from "../../../utils/CUTInfo";
-import { getImagePath } from "../../../utils/imagePath";
 import PopupImage from "../../common/PopupImage";
 import { motion } from "motion/react";
 import AnimateImage from "../../common/AnimateImage";
@@ -21,7 +20,7 @@ const AccessSection = () => {
       whileInView={sectionInView}
       viewport={{ once: true, amount: 0.5 }}
     >
-      <CommonSection id="access-section">
+      <CommonSection id="access-section" grid>
         <span style={{ position: "relative", zIndex: 2 }}>
           <SectionTitle title="ACCESS" subTitle="アクセス" />
         </span>

@@ -12,7 +12,6 @@ const AnimateImage = ({
   delay = 0,
   gridArea = `i${imgNumber}`,
   delyaRange = 1.0,
-  
 }: {
   imgNumber: number;
   delay?: number;
@@ -41,7 +40,7 @@ const AnimateImage = ({
 
   return (
     <div style={{ gridArea }} className={styles.container}>
-      <motion.div className={styles.imgContainer} {...animateProps(0.05)}>
+      <motion.div className={styles.imgContainer} {...animateProps(0.1)}>
         <div
           style={{
             backgroundImage: getImagePath(imgNumber),

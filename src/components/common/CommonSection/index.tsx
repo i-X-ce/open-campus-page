@@ -13,6 +13,7 @@ const CommonSection = ({
   id = "",
   insetShadow = false,
   amount = 0.3,
+  grid = false,
 }: {
   children?: ReactNode;
   backgroundColor?: ColorType;
@@ -20,10 +21,11 @@ const CommonSection = ({
   id?: string;
   insetShadow?: boolean;
   amount?: number;
+  grid?: boolean;
 }) => {
   return (
     <motion.section
-      className={`${styles.section} ${className}`}
+      className={`${styles.section} ${className} ${grid ? styles.grid : ""}`}
       style={{
         backgroundColor: ct2css(backgroundColor),
         ...(insetShadow && { boxShadow: "inset var(--shadow-big)" }),

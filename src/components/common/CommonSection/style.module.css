@@ -4,6 +4,10 @@
   overflow-x: hidden;
 }
 
+.grid {
+  background-image: var(--grid-image);
+}
+
 .container {
   max-width: var(--max-width);
   margin: 0 auto;
