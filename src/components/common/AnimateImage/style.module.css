@@ -1,0 +1,29 @@
+.container {
+  position: relative;
+  background-color: var(--bc-section);
+}
+
+.imgContainer {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.imgBox {
+  position: absolute;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+}
+
+.imgBack {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: var(--bc-primary);
+  flex-direction: column;
+}
