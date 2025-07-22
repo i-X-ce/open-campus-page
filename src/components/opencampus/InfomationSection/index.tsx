@@ -1,6 +1,6 @@
 import styles from "./style.module.css";
 
-import CommonSection, { sectionInView } from "../../common/CommonSection";
+import CommonSection from "../../common/CommonSection";
 import SectionTitle from "../../common/SectionTitle";
 import InfomationButton from "../InfomationButton";
 import { motion } from "motion/react";
