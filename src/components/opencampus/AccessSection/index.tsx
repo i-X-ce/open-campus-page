@@ -18,7 +18,7 @@ const AccessSection = () => {
     <motion.section
       className={styles.section}
       whileInView={sectionInView}
-      viewport={{ once: true, amount: 0.5 }}
+      viewport={{ once: true, amount: 0.2 }}
     >
       <CommonSection id="access-section">
         <span style={{ position: "relative", zIndex: 2 }}>

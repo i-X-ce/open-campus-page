@@ -33,7 +33,7 @@ const kEY_FRAME = {
 
 const AboutSection = () => {
   return (
-    <CommonSection id="about-section" amount={0.2}>
+    <CommonSection id="about-section">
       <SectionTitle title="ABOUT" subTitle="大学紹介" />
       <div className={styles.container}>
         <div className={styles.textContainer}>
